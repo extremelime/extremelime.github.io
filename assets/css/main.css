@@ -1,0 +1,395 @@
+@import url(fontawesome-all.min.css);
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 2%;
+	border: 0;
+	font-size: 100%;
+	font-family: Arial;
+	vertical-align: baseline;}
+
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: '';
+		content: none;
+	}
+
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+
+
+/* Basic */
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+	body {
+		-ms-overflow-style: scrollbar;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+			background: #FFFF00;
+		}
+
+	}
+
+	html {
+		overflow-x: hidden;
+		background: #FFFF00;
+	}
+
+	body {
+		background: #FFFF00;
+		overflow-x: hidden;
+	}
+
+		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+			-moz-animation: none !important;
+			-webkit-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		}
+
+/* Typography */
+
+	html {
+		font-size: 18pt;
+	}
+
+		@media screen and (max-width: 1920px) {
+
+			html {
+				font-size: 13pt;
+			}
+
+		}
+
+		@media screen and (max-width: 1152px) {
+
+			html {
+				font-size: 14pt;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			html {
+				font-size: 12pt;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			html {
+				font-size: 11pt;
+			}
+
+		}
+
+	body {
+		background-color: #FFFF00;
+		color: #000000;
+	}
+
+	body, input, select, textarea {
+		color: #000000;
+		font-size: 1rem;
+		font-weight: 300;
+		letter-spacing: 0.0375em;
+		line-height: 2;
+	}
+
+	a {
+		-moz-transition: border-bottom-color 0.25s ease-in-out;
+		-webkit-transition: border-bottom-color 0.25s ease-in-out;
+		-ms-transition: border-bottom-color 0.25s ease-in-out;
+		transition: border-bottom-color 0.25s ease-in-out;
+		text-decoration: none;
+		color: #000000;
+		border-bottom: dotted 1px;
+	}
+
+		a:hover {
+			text-decoration: none;
+			border-bottom-color: transparent;
+		}
+
+	strong, b {
+		font-weight: 600;
+		color: #000000;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p {
+		margin: 0 0 2rem 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #000000;
+		font-weight: 600;
+		letter-spacing: 0.175em;
+		line-height: 1.75;
+		margin: 0 0 1.5rem 0;
+		text-transform: uppercase;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h1 {
+		font-size: 5rem;
+		font-weight: 700;
+		letter-spacing: -0.05em;
+		line-height: 1.1;
+		margin: 0 0 1.5rem 0;
+		text-transform: none;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		font-weight: 800;
+		margin: 0 0 2rem 0;
+	}
+
+	h3 {
+		font-size: 0.875rem;
+	}
+
+	h4 {
+		font-size: 0.875rem;
+	}
+
+	h5 {
+		font-size: 0.75rem;
+	}
+
+	h6 {
+		font-size: 0.625rem;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		h1 {
+			font-size: 4.5rem;
+			line-height: 1.1;
+		}
+
+		h2 {
+			font-size: 1.25rem;
+			line-height: 1.7;
+		}
+
+		h3 {
+			font-size: 0.9rem;
+		}
+
+		h4 {
+			font-size: 0.75rem;
+		}
+
+		h5 {
+			font-size: 0.675rem;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		h1 {
+			font-size: 3.75rem;
+		}
+
+		h2 {
+			font-size: 1.125rem;
+		}
+
+		h3 {
+			font-size: 0.8rem;
+		}
+
+		h4 {
+			font-size: 0.675rem;
+		}
+
+		h5 {
+			font-size: 0.675rem;
+		}
+
+	}
+
+
+	code {
+		background: rgba(144, 144, 144, 0.1);
+		border-radius: 0.325rem;
+		font-size: 0.9rem;
+		margin: 0 0.25rem;
+		padding: 0.25rem 0.65rem;
+	}
+
+	pre {
+		-webkit-overflow-scrolling: touch;
+		font-size: 0.9rem;
+		margin: 0 0 2rem 0;
+		width: 100%;
+	}
+
+		pre code {
+			display: inline-block;
+			line-height: 1.75;
+			padding: 1rem 1.5rem;
+			overflow-x: auto;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		label {
+			font-size: 0.675rem;
+		}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			font-size: 1rem;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		label {
+			font-size: 0.675rem;
+		}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			font-size: 1rem;
+		}
+
+	}
+
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+/* Icons */
+
+	ul.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+		ul.icons li {
+			display: inline-block;
+		}
+
+			ul.icons li:last-child {
+				padding-right: 0;
+			}
+
+			ul.icons li .icon {
+				-moz-transition: background-color 0.25s ease-in-out;
+				-webkit-transition: background-color 0.25s ease-in-out;
+				-ms-transition: background-color 0.25s ease-in-out;
+				transition: background-color 0.25s ease-in-out;
+				width: 3.25rem;
+				height: 3.25rem;
+				text-align: center;
+				line-height: 3.25rem;
+				border-radius: 3.25rem;
+				display: inline-block;
+			}
+
+				ul.icons li .icon:before {
+					font-size: 1.25rem;
+				}
+
+				ul.icons li .icon:hover {
+					background-color: rgba(144, 144, 144, 0.1);
+				}
+
+
+		@media screen and (max-width: 736px) {
+
+			ul.feature-icons {
+				margin: 0 0 3rem 0;
+			}
+
+				ul.feature-icons li {
+					width: 100%;
+				}
+
+					ul.feature-icons li:nth-child(2) {
+						margin-top: 2rem;
+					}
+
+		}
+}
