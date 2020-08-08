@@ -1,8 +1,6 @@
-@import url(fontawesome-all.min.css);
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
+pre, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, dl, dt, dd, ol, ul, li, fieldset,
@@ -12,15 +10,53 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output,
 section, summary, time, mark, audio, video {
 	margin: 0;
-	padding: 2%;
+	padding: 2.3% 3% 2%;
 	border: 0;
 	font-size: 100%;
 	font-family: Arial;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	text-decoration: none;
+	}
 
+.shadow { 
+   color:#FFFF00;
+   font: bold 52px Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   text-shadow: 1px 1px #32CD32, 
+                2px 2px #32CD32, 
+                3px 3px #32CD32;
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
+}
+.xtreme {
+   position: relative; 
+   top: -3px; 
+   left: -3px; 
+   color:#FFFF00;
+   text-shadow: 1px 1px #32CD32, 
+                2px 2px #32CD32, 
+                3px 3px #32CD32, 
+                4px 4px #32CD32, 
+                5px 5px #32CD32, 
+                6px 6px #32CD32;}
+.shadow:hover {
+   position: relative; 
+   top: -3px; 
+   left: -3px;
+   text-decoration: none; 
+   text-shadow: 1px 1px #32CD32, 
+                2px 2px #32CD32, 
+                3px 3px #32CD32, 
+                4px 4px #32CD32, 
+                5px 5px #32CD32, 
+                6px 6px #32CD32;
+}
 
 body {
 	line-height: 1;
+	background-image: linear-gradient(90deg, #FFFF00,#32CD32);
 }
 
 ol, ul {
@@ -57,18 +93,15 @@ body {
 
 		html, body {
 			min-width: 320px;
-			background: #FFFF00;
 		}
 
 	}
 
 	html {
 		overflow-x: hidden;
-		background: #FFFF00;
 	}
 
 	body {
-		background: #FFFF00;
 		overflow-x: hidden;
 	}
 
@@ -122,7 +155,6 @@ body {
 		}
 
 	body {
-		background-color: #FFFF00;
 		color: #000000;
 	}
 
@@ -303,93 +335,4 @@ body {
 		input[type="radio"] + label {
 			font-size: 1rem;
 		}
-
 	}
-
-/* Icon */
-
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.solid:before {
-			font-weight: 900;
-		}
-
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
-
-/* Icons */
-
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
-
-		ul.icons li {
-			display: inline-block;
-		}
-
-			ul.icons li:last-child {
-				padding-right: 0;
-			}
-
-			ul.icons li .icon {
-				-moz-transition: background-color 0.25s ease-in-out;
-				-webkit-transition: background-color 0.25s ease-in-out;
-				-ms-transition: background-color 0.25s ease-in-out;
-				transition: background-color 0.25s ease-in-out;
-				width: 3.25rem;
-				height: 3.25rem;
-				text-align: center;
-				line-height: 3.25rem;
-				border-radius: 3.25rem;
-				display: inline-block;
-			}
-
-				ul.icons li .icon:before {
-					font-size: 1.25rem;
-				}
-
-				ul.icons li .icon:hover {
-					background-color: rgba(144, 144, 144, 0.1);
-				}
-
-
-		@media screen and (max-width: 736px) {
-
-			ul.feature-icons {
-				margin: 0 0 3rem 0;
-			}
-
-				ul.feature-icons li {
-					width: 100%;
-				}
-
-					ul.feature-icons li:nth-child(2) {
-						margin-top: 2rem;
-					}
-
-		}
-}
