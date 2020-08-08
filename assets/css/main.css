@@ -54,7 +54,7 @@ section, summary, time, mark, audio, video {
                 6px 6px #32CD32;
 }
 @media (max-aspect-ratio: 4/3){
-	h1{font-size: 10vh !important;}
+	h1{font-size: 8vh !important;}
 	span,a {
 		font-size: 6vh !important;
 	}}
