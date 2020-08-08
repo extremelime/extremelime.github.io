@@ -56,7 +56,7 @@ section, summary, time, mark, audio, video {
 
 body {
 	line-height: 1;
-	background-image: linear-gradient(90deg, #FFFF00,#32CD32);
+	background-image: linear-gradient(90deg, #FFF000,#32CD32);
 }
 
 ol, ul {
