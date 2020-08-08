@@ -61,6 +61,7 @@ span{
 		display: flex;
 	}}
 body {
-	line-height: 1;
+  height: 100%;
+  overflow: auto;
 	background-image: linear-gradient(90deg, #FFF000,#32CD32);
 }
