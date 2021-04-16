@@ -13,6 +13,8 @@ body {
 	margin: 20;
 	padding: 0;
 	font-size: 1.1em;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 @media only screen {
 	body {
@@ -153,31 +155,6 @@ img {
 	padding-right: 0;
 }
 
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
 table,
 th,
 td {
@@ -230,6 +207,10 @@ ul.to-do-list > li {
   display: flex;
   width: 100%;
   align-items: stretch;
+}
+.bookmark:hover {
+  border-color:#BBC7DD; 
+  border-width: 1.4;
 }
 
 .bookmark-title {
@@ -477,175 +458,6 @@ blockquote {
 
 .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
 
-div#pager .ui-resizable-handle {
-  top: 0px;
-  height: 8px;
-  background: #f7f7f7;
-  border-top: 1px solid #cfcfcf;
-  border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
-        the resize handle. */
-}
-div#pager .ui-resizable-handle::after {
-  content: '';
-  top: 2px;
-  left: 50%;
-  height: 3px;
-  width: 30px;
-  margin-left: -15px;
-  position: absolute;
-  border-top: 1px solid #cfcfcf;
-}
-.quickhelp {
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  line-height: 1.8em;
-}
-.shortcut_key {
-  display: inline-block;
-  width: 21ex;
-  text-align: right;
-  font-family: monospace;
-}
-.shortcut_descr {
-  display: inline-block;
-  /* Old browsers */
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  /* Modern browsers */
-  flex: 1;
-}
-span.save_widget {
-  height: 30px;
-  margin-top: 4px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  width: 50%;
-  flex: 1;
-}
-span.save_widget span.filename {
-  height: 100%;
-  line-height: 1em;
-  margin-left: 16px;
-  border: none;
-  font-size: 146.5%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  border-radius: 2px;
-}
-span.save_widget span.filename:hover {
-  background-color: #e6e6e6;
-}
-[dir="rtl"] span.save_widget.pull-left {
-  float: right !important;
-  float: right;
-}
-[dir="rtl"] span.save_widget span.filename {
-  margin-left: 0;
-  margin-right: 16px;
-}
-span.checkpoint_status,
-span.autosave_status {
-  font-size: small;
-  white-space: nowrap;
-  padding: 0 5px;
-}
-@media (max-width: 767px) {
-  span.save_widget {
-    font-size: small;
-    padding: 0 0 0 5px;
-  }
-  span.checkpoint_status,
-  span.autosave_status {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  span.checkpoint_status {
-    display: none;
-  }
-  span.autosave_status {
-    font-size: x-small;
-  }
-}
-.toolbar {
-  padding: 0px;
-  margin-left: -5px;
-  margin-top: 2px;
-  margin-bottom: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.toolbar select,
-.toolbar label {
-  width: auto;
-  vertical-align: middle;
-  margin-right: 2px;
-  margin-bottom: 0px;
-  display: inline;
-  font-size: 92%;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
-  padding: 0px;
-  padding-top: 3px;
-}
-.toolbar .btn {
-  padding: 2px 8px;
-}
-.toolbar .btn-group {
-  margin-top: 0px;
-  margin-left: 5px;
-}
-.toolbar-btn-label {
-  margin-left: 6px;
-}
-#maintoolbar {
-  margin-bottom: -3px;
-  margin-top: -8px;
-  border: 0px;
-  min-height: 27px;
-  margin-left: 0px;
-  padding-top: 11px;
-  padding-bottom: 3px;
-}
-#maintoolbar .navbar-text {
-  float: none;
-  vertical-align: middle;
-  text-align: right;
-  margin-left: 5px;
-  margin-right: 0px;
-  margin-top: 0px;
-}
-.select-xs {
-  height: 24px;
-}
-[dir="rtl"] .btn-group > .btn,
-.btn-group-vertical > .btn {
-  float: right;
-}
-.pulse,
-.dropdown-menu > li > a.pulse,
-li.pulse > a.dropdown-toggle,
-li.pulse.open > a.dropdown-toggle {
-  background-color: #F37626;
-  color: white;
-}
 /**
  * Primary styles
  *
@@ -2389,6 +2201,7 @@ select.form-control.select-xs {
  -webkit-box-shadow: none;
  box-shadow: none;
 }
+/*
 div.output.output_scroll {
  box-shadow: none;
 }
@@ -2411,7 +2224,7 @@ div.output.output_scroll {
  background: #909090;
  background-clip: content-box;
  width: 11px;
-}
+}*/
 HTML,
 body,
 div,
@@ -3054,6 +2867,7 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  border-collapse: collapse;
  border-spacing: 0;
  color: #353535;
+ overflow-x:auto;
  table-layout: fixed;
 }
 .rendered_html thead {
@@ -4199,16 +4013,13 @@ div#maintoolbar {
 }
 
 .datalink a {
-  color: #00447c;
+  color: #004679;
   padding: .2em;
   text-decoration: none;
-
-  border-radius:0.2em;
+  border-radius:0.3em;
   box-sizing: border-box;
   text-decoration:none;
-  font-family:'Roboto',sans-serif;
   font-weight:500;
-  color:#00447c;
   text-align:center;
   transition: all 0.2s;
 }
@@ -4216,55 +4027,52 @@ div#maintoolbar {
 /* Change background on mouse-over */
 
 .datalink a:hover {
-  color:#FFF;
-  background-color:#00447c;
+  color:#839BBF;
 }
 
 /* The navigation bar */
 .navbar2 {
-  overflow: hidden;
-  background-color: rgba(3,3,3,0.3);
+  background-color: rgba(0,25,65,0.5);
   position: fixed; /* Set the navbar to fixed position */
-  top: 46; /* Position the navbar at the top of the page */
-  right:2;
+  top: 41; /* Position the navbar at the top of the page */
+  right:3;
   text-align: center;
-  border-radius:0.5vh;
-  width: auto; 
+  border-radius:1vh;
   font-size:1em;
   z-index:100;
+  white-space: normal !important;
 }
 .hamburger {
   overflow: hidden;
-  border-radius:0.5vh;
-  background-color: rgba(3,3,3,0.3);
+  border-radius:1vh;
+  background-color: rgba(0,25,65,0.5);
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   right:0;
   color: #FFF;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0.25em .7em;
   text-decoration: none;
-  width: auto; /* Full width */
   z-index:100;
 }
 
 /* Links inside the navbar */
 .navbar2 a {
   color: #FFF;
-  text-align: center;
   padding: 0.6em 0.6em;
+  text-align: center;
   line-height: 2em;
   text-decoration: none;
-  width:90%;
 }
 
 /* Change background on mouse-over */
 .navbar2 a:hover {
-  border-radius:0.5vh;
-  background-color: rgba(220,220,220,0.8);
-  color: black;
-  width:90%;
+  border-radius:1vh;
+  padding: 0.6em 0.6em;
+  text-align: center;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
 }
 
 .videoWrapper {
@@ -4291,9 +4099,10 @@ h3{
 }
 table{
   font-size:0.7em;
+  overflow-x:auto;
 }
 html {
-  margin: 5vmin 22vmin 22vmin 22vmin;
+  margin: 3vmin 22vmin 22vmin 22vmin;
 }
 p a{
   font-family: 'Tinos', serif;
@@ -4301,11 +4110,73 @@ p a{
 li{
   font-family: 'Tinos', serif;
 }
+.headerimage{
+  width: 120%;
+  vertical-align: top;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+@media (max-width: 575.98px) {
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .table-responsive-sm > .table-bordered {
+    border: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .table-responsive-md > .table-bordered {
+    border: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .table-responsive-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .table-responsive-lg > .table-bordered {
+    border: 0;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .table-responsive-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .table-responsive-xl > .table-bordered {
+    border: 0;
+  }
+}
 @media (max-aspect-ratio: 4/3){ 
-  .hamburger {font-size:1.2em;}
-  .navbar2 {font-size:1.2em; top:52;}
+  .hamburger {font-size:1.3em;}
+  .navbar2 {font-size:1.1em; top:45;}
   html {
-  margin: 5vmin 8vmin 8vmin 8vmin;
+  margin: 3vmin 8vmin 8vmin 8vmin;
 }
 }
 /* iPhone X Portrait */
@@ -4319,13 +4190,17 @@ li{
   }
   .page-subtitle{
     font-size:2rem;}
-  .hamburger {font-size:2em;}
-  .navbar2 {font-size:2em; top:85;}
+  .hamburger {font-size:2.3em;}
+  .navbar2 {font-size:2.1em; top:77;}
   html {
-  margin: 5vmin 8vmin 8vmin 8vmin;
+  margin: 3vmin 8vmin 8vmin 8vmin;
 }
   body p,li{
     font-size:2.5em;
+  }
+  html,body{
+    max-width: 100%;
+    overflow-x: hidden;
   }
   h1 {
   font-size: 4rem;
@@ -4348,7 +4223,7 @@ li{
 }
 
 </style>
-
+ <!--
 <script>
 
 function dropdownMenu() {
@@ -4371,21 +4246,22 @@ function dropdownMenu() {
     z.style.display = "block";
   }
 }
- </script>  
+ </script>  -->
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
  <title>COVID-19 & Employment</title>
-</head><body><article id="294a0a2a-566b-4132-bfa9-75e454898dc0" class="page sans"><header><h1 class="page-title">Does Employment Affect COVID-19 Case Rates?</h1></header><button class="hamburger" onclick="dropdownMenu()"><span id='hamopen' style='display:block;'>&#9776;</span><span id='hamclose' style='display:none;'>&#10005;</span></button><span id="navbar2" class="navbar2" style='display:none;'>
-  <a href="#Intro">Intro</a>
-  <a href="#Code">Code</a>
-  <a href="#Data">Data</a>
-  <a href="#Analysis">Analysis</a>
-  <a href="#Visualization">Visualization</a>
-  <a href="#Conclusion">Conclusion</a>
-</span><span class=page-subtitle>Jake Wigal, Dongyu Yang</span><div class="page-body">
-<p id="Intro" class="">There has been an increase in COVID-19 case numbers in California despite action from state and municipal governments meant to slow the spread of the virus. New governmental policies often involve modifying the activity of economic participants in a way that attempts to reduce physical contact between people. There are challenges to the uniform implementation of social-distancing guidelines across industries that have led to varying approaches to handling these new policies. For example, while it is possible for universities to switch to an online-only format to limit COVID-19 exposure, the farm industry relies on physical labor that must be performed irrespective of whether workers are safe or healthy.</p><figure id="b9ce0f5d-45bc-48c0-9f6b-539edbdd67cd"><a target="_blank" href="https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">&#x27;Everyone tested positive&#x27;: Covid devastates farm workers in CA</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.guim.co.uk/images/favicon-32x32.ico" class="icon bookmark-icon"/>https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers</div></div><img src="https://i.guim.co.uk/img/media/c30e7d6f5d12e047f86eb591ffda5d676a0e18ca/0_232_3500_2101/master/3500.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=bac2a1afe6e87962247972520ccb1d77" class="bookmark-image"/></a></figure><p id="6fe9e061-823a-476a-b27e-73579404717b" class="">There have been reports of some essential workers feeling unsafe in their working conditions. An assessment of risk across industries could inform policy makers, industry leaders, and members of the general public who may be employees or consumers of a specific industry, on whether additional precautions or guidelines may be necessary to conduct business in a safe and productive manner.
+</head><body><div class="headerimage"><img src="./covid/covid-header.png"></div>
+<article id="294a0a2a-566b-4132-bfa9-75e454898dc0" class="page sans"><header><h1 id="Intro" class="page-title">Does Employment Affect COVID-19 Case Rates?</h1></header><!--<button class="hamburger" onclick="dropdownMenu()"><span id='hamopen' style='display:block;'>&#9776;</span><span id='hamclose' style='display:none;'>&#10005;</span></button><span id="navbar2" class="navbar2" style='display:none;'>
+  <a href="#Intro"><i class="fas fa-home"></i></a><br>
+  <a href="#Code"><i class="fas fa-code"></i></a><br>
+  <a href="#Data"><i class="fas fa-table"></i></a><br>
+  <a href="#Analysis"><i class="fas fa-calculator"></i></a><br>
+  <a href="#Visualization"><i class="fas fa-chart-bar"></i></a><br><a href="#Conclusion"><i class="fas fa-check-circle"></i></a><br>
+</span>--><span class=page-subtitle>Jake Wigal, Dongyu Yang</span><div class="page-body">
+<p class="">COVID-19 case numbers have increased in California despite action from state and municipal governments meant to slow the spread of the virus. New governmental policies often involve modifying the activity of economic participants in a way that attempts to reduce physical contact between people. There are challenges to the uniform implementation of social-distancing guidelines across industries that have led to varying approaches to handling these new policies. For example, while it is possible for universities to switch to an online-only format to limit COVID-19 exposure, the farm industry relies on physical labor that must be performed irrespective of whether workers are safe or healthy.</p><figure id="b9ce0f5d-45bc-48c0-9f6b-539edbdd67cd"><a target="_blank" href="https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">&#x27;Everyone tested positive&#x27;: Covid devastates farm workers</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.guim.co.uk/images/favicon-32x32.ico" class="icon bookmark-icon"/>https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers</div></div><img src="https://i.guim.co.uk/img/media/c30e7d6f5d12e047f86eb591ffda5d676a0e18ca/0_232_3500_2101/master/3500.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=bac2a1afe6e87962247972520ccb1d77" class="bookmark-image"/></a></figure><p id="6fe9e061-823a-476a-b27e-73579404717b" class="">There have been reports of some essential workers feeling unsafe in their working conditions. An assessment of risk across industries could inform policy makers, industry leaders, and members of the general public who may be employees or consumers of a specific industry, on whether additional precautions or guidelines may be necessary to conduct business in a safe and productive manner.
 
-By analyzing the most recent economic data for the CA Employment Development Department and State of California COVID-19 Health Data, we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Code">Source Code</h2><p>View the source code on GitLab.</p><figure id="d"><a target="_blank" href="https://gitlab.nps.edu/jacob.wigal/covid" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Projects · Wigal, Jacob (CIV) / COVID</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://gitlab.nps.edu/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" class="icon bookmark-icon"/>https://gitlab.nps.edu/jacob.wigal/covid</div></div><img src="https://gitlab.nps.edu/uploads/-/system/project/avatar/3868/Document.png" class="bookmark-image"/></a></figure><h2 id="Data" class="">Dataset Sources</h2><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
-<p id="ca36d6a3-33f7-4b33-a838-4c12dd36c7c2" class="">Up-to-date COVID-19 data were freely available from the California Department of Public Health on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/group/covid-19">ca.gov</a>). These data contained the amount of new COVID-19 cases and deaths in each county reported on each day, since 18 Mar 2020. There were a total of about 10,000 rows of entries stored in a csv format, with the following headers:</p>
-<table border="1" class="dataframe">
+By analyzing economic data for the CA Employment Development Department and State of California COVID-19 Health Data (March 2020 - July 2020), we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Code"><i class="fas fa-code"></i> Source Code</h2><p>View the source code on Github.</p><figure id="aee60d4d-1fbc-4220-a00b-aac0ae78ef3a"><a target="_blank" href="https://github.com/extremelyme/covid19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">extremelyme/covid19</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/extremelyme/covid19</div></div><img src="https://repository-images.githubusercontent.com/296238251/57229380-f874-11ea-9c01-f576f6b9aa1d" class="bookmark-image"/></a></figure><h2 id="Data" class=""> <i class="fas fa-table"></i> Dataset Sources</h2><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
+<p id="ca36d6a3-33f7-4b33-a838-4c12dd36c7c2" class="">Up-to-date COVID-19 data were freely available from the California Department of Public Health on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/group/covid-19">ca.gov</a>). These data contained the amount of new COVID-19 cases and deaths in each county reported on each day, since 18 Mar 2020. There were a total of about 10,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>index</th>
@@ -4408,11 +4284,11 @@ By analyzing the most recent economic data for the CA Employment Development Dep
       <td>Date of report</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 <p id="54c3cefc-d7d7-4e8f-8e59-28ab676cdafd" class="">There were inaccuracies in the reporting as some counties inputted negative new counts of COVID-19 cases, possibly to compensate for errant totals from previous reports. By examining the monthly totals, such discrepancies are less likely to be an issue.</p><figure id="de167388-7e5b-495c-bd15-a03c146ff29e"><a target="_blank" href="https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CA sorts through coronavirus data as glitch stymies policy</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.politico.com/21/8e/8fae7c044f8aa66f607a10f86d31/states.png" class="icon bookmark-icon"/>https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972</div></div><img src="https://static.politico.com/e4/e9/7ac61e5545afa8b4a90e29906849/20200807-calicovidtesting-gty-773.jpg" class="bookmark-image"/></a></figure></p><p>Other available datasets included hospitalization, testing, and PPE logistics, but none were able to describe the origin of the cases. Hence, we could not use these data.</p>
 <h3 id="5b4423cd-e944-4a76-8c6b-a4f29a4656e2"><span class="datalink"><a target="_blank" href="https://data.edd.ca.gov/Industry-Information-/Industry-Employment-in-California-Counties/nt76-4rha">Employment</a></span></h3>
-<p id="eae25328-fdf6-49eb-8f62-b29ac07dd68e" class="">Industry employment data for each California county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of jobs in each industry reported each month, since Jan 1990. There were a total of about 760,000 rows of entries stored in a single csv file, with the following headers:</p>
-<table border="1" class="dataframe">
+<p id="eae25328-fdf6-49eb-8f62-b29ac07dd68e" class="">Industry employment data for each California county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of jobs in each industry reported each month, since Jan 1990. There were a total of about 760,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Area Type</th>
@@ -4437,10 +4313,10 @@ By analyzing the most recent economic data for the CA Employment Development Dep
       <td>Number of jobs</td>
     </tr>
   </tbody>
-</table><h3 id="0980860f-c0c8-454b-b703-b567a843c5cc"><span class="datalink">
+</table></div><h3 id="0980860f-c0c8-454b-b703-b567a843c5cc"><span class="datalink">
 <a target="_blank" href="https://www.labormarketinfo.edd.ca.gov/data/monthly-data-release.html">Unemployment</a></span></h3>
-<p id="d8840d4b-d3f7-4a92-9de9-8da40e81a991" class="">The previous dataset accounts for the number of employed people in each county, but not the unemployed. Unemployment data from each county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of unemployed in each county reported each month, since Jan 1990. There were a total of about 160,000 rows of entries stored in a single csv file, with the following headers:</p>
-<table border="1" class="dataframe">
+<p id="d8840d4b-d3f7-4a92-9de9-8da40e81a991" class="">The previous dataset accounts for the number of employed people in each county, but not the unemployed. Unemployment data from each county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of unemployed in each county reported each month, since Jan 1990. There were a total of about 160,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Area Type</th>
@@ -4465,33 +4341,33 @@ By analyzing the most recent economic data for the CA Employment Development Dep
       <td>Civilians without jobs and making specific effort to find a job</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 <p id="9e0f9f1a-8600-4213-a30e-1dfa3f3688f2" class="">It was noted that there were discrepancies in the numbers reported from each county, as not all counties reported their employment data in 2020, and the total number of jobs do not necessarily tally with the total workforce since some may take more than 1 job.</p>
 <h3 id="a03effb5-4646-4f55-83c0-2b9e233a2458"><span class="datalink"><a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">County Boundaries</a></span></h3>
 <p id="c69e6625-df45-425c-8738-0e2964908c97" class="">To produce mapped visualizations of county data, we utilized 2016 TIGER/Line Shapefiles, accessible on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">ca.gov</a>).</p>
 <h3 id="e232f037-1788-44ac-aa11-afdd480c645c"><span class="datalink"><a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a></span></h3>
-<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p><p id="2c222762-59b2-4c6e-bc84-f0833d38abfa" class=""></p><h2 id="Analysis">Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/algorithm-flowchart.png"><img src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
+<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p><p id="2c222762-59b2-4c6e-bc84-f0833d38abfa" class=""></p><h2 id="Analysis"><i class="fas fa-calculator"></i> Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/algorithm-flowchart.png"><img src="./covid/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
 
-The analysis objective was to derive insights between the monthly changes in COVID-19 cases and proportion of jobs both at the county and state level. This was achieved by examining if there were any significant correlations between monthly COVID-19 cases and monthly industry jobs (i.e. if COVID-19 cases may be lower or higher than average in a particular industry). All data were in the csv format and parsed into dataframes using the Pandas Python package, with the exception of the COVID-19 data which were parsed into a dataframe from an API. The data were then merged according to common county names and dates. Fourteen counties (California has 58) did not report data in 2020, so they were excluded from industry data calculations. This does not apply to unemployment data, however, which were reported for every county in the timeframe of interest.</p>
-<h2 id="Visualization">Visualization</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/visualization-flowchart.png"><img src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/visualization-flowchart.png"/></a></figure><p>Scatter plots, bar plots and choropleth maps were subsequently generated using the processed dataframes.
+The analysis objective was to derive insights from the monthly changes in COVID-19 cases and proportion of jobs both at the county and state level. This was achieved by examining if there were any significant correlations between monthly COVID-19 cases and monthly industry jobs (i.e. if COVID-19 cases may be lower or higher than average in a particular industry). All data were in the csv format and parsed into dataframes using the Pandas Python package, with the exception of the COVID-19 data which were parsed into a dataframe from an API. The data were then merged according to common county names and dates. Fourteen counties (California has 58) did not report data in 2020, so they were excluded from industry data calculations. This does not apply to unemployment data, however, which were reported for every county in the timeframe of interest.</p>
+<h2 id="Visualization"><i class="fas fa-chart-bar"></i> Visualization</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/visualization-flowchart.png"><img src="./covid/visualization-flowchart.png"/></a></figure><p>Scatter plots, bar plots and choropleth maps were subsequently generated using the processed dataframes.
 <ul><li>Scatter plots were chosen for analyzing the correlation between COVID cases and % of jobs in a particular sector across the various counties. A strong correlation would indicate a possible relationship between industry activity and COVID infection rate.</li>
 <li>Bar plots were chosen for analysing the distribution of workforce across the various industries, which would help to quantify differences in jobs/covid cases between different industries.</li>
 <li>Choropleth maps helped to display geospatial distribution of the workforce and COVID cases. These maps can be used to identify any clusters where COVID cases or certain industries may be concentrated.</li></ul></p><p>All the bar, line and scatter charts below were generated using Plotly to enable mouse-over queries and sliders to switch between different months and charts. Choropleth maps were generated using Folium and displayed in html using Leaflet. A few HTML tweaks were required to calibrate the proper display bounds and zooming parameters that would enable the smoothest user experience.</p>
 <h3 id="b49cb5be-3811-46dd-994e-834a574c1304" class="">Figure 1: COVID-19 Cases per 100k in California (CA)</h3>
-<div class="videoWrapper"><iframe src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/1_covid_cases.html" height="90%" width="100%" title="Figure 1" frameBorder="0"></iframe></div>
+<div class="videoWrapper"><iframe src="./covid/1_covid_cases.html" height="90%" width="100%" title="Figure 1" frameBorder="0"></iframe></div>
 <p id="1435a851-e34b-4c99-9253-fc2530151619" class="">Case rates in California have been increasing. We want to examine the relationship between the case rates and the proportion of industry in each county. </p>
 <h3 id="6ecd6284-b54c-4026-bb26-7825ea69df01" class="">Figure 2: Proportion of Industries in CA, Weighted by CA COVID-19 Cases (slide right)</h3>
-<div class="videoWrapper"><iframe  src="  https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/2_proportion_industries_ca.html" height="90%" width="100%" title="Figure 2" frameBorder="0"></iframe></div>
+<div class="videoWrapper"><iframe  src="  ./covid/2_proportion_industries_ca.html" height="90%" width="100%" title="Figure 2" frameBorder="0"></iframe></div>
 <p>We calculated industry proportions for the reporting counties using the industry job totals of each county (Figure 2, Left). Given these data, we wanted to test our hypothesis that COVID-19 cases would be higher in counties containing larger proportions of certain industries. To do this, we calculated COVID-19 weighted industry proportions. These proportions represent the percentage of total COVID-19 cases that can be accounted for by the industry employment proportion of each county. In essence, the key question is: if all COVID-19 cases could be evenly distributed across industry employment and employment status, given the varying industry employment proportions and COVID-19 case rates of counties, how many cases can be attributed to each industry or employment status? 
 
 COVID-19 weighted proportions were calculated by taking the industry proportions of each county, multiplying them by the case numbers of each county, and then summing by industry before creating new proportions (Figure 2, Center). To highlight any changes between the two proportions, we calculated and plotted the difference of the two proportions (Figure 2, Right).</p>
-<h3 id="36507d3e-409f-4a36-8f3b-dd43ca6f79e6" class="">Figure 3: Change in Proportion of Industries After Weighted by COVID-19 Cases - Sorted by Mean</h3><div class="videoWrapper"><iframe  src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/3_change_proportion_industries_ca.html" height="90%" width="100%" title="Figure 3" frameBorder="0"></iframe></div>
-<p>Looking at the changes in covid-weighted industries, we noted that essential services (such as transportation and warehousing) stayed positive throughout this period, indicating increased contribution to new COVID cases from counties that relied on such industries. In addition, some of the industries showed reduction in case contributions after weighting such as Professional/Business services, possibly due to introduction of work from home arrangements. The largest increases in case contribution after weighting came from total farm and the unemployed. 
+<h3 id="36507d3e-409f-4a36-8f3b-dd43ca6f79e6" class="">Figure 3: Change in Proportion of Industries After Weighted by COVID-19 Cases - Sorted by Mean</h3><div class="videoWrapper"><iframe  src="./covid/3_change_proportion_industries_ca.html" height="90%" width="100%" title="Figure 3" frameBorder="0"></iframe></div>
+<p>Looking at the changes in covid-weighted industries, we noted that essential services (such as transportation and warehousing) stayed positive throughout this period, indicating potential increased contributions of new COVID cases from counties that relied on such industries. In addition, some of the industries showed reduction in case contributions after weighting such as Professional/Business services, possibly due to the introduction of work from home arrangements. The largest increases in case contribution after weighting came from Total Farm and the unemployed. 
 
-The data suggest that total farm started with low COVID cases, and started to climb over the months, possibly due to vulnerability of farm workers and lack of protective coverings (e.g. masks) as mentioned in the Guardian article. The data unexpectedly showed unemployment as a significant contributor to new COVID cases. Unemployment increased as a consequence of lockdown measures imposed as a result of COVID-19, and unemployed people may be more likely to make trips away from home possibly as a result of having additional time or the pressure of providing income. </p>
+The data suggest that Total Farm began with low COVID cases, and started to climb over the months, possibly due to the vulnerability of farm workers and lack of protective coverings (e.g. masks) as mentioned in the Guardian article. The data unexpectedly showed unemployment as a significant contributor to new COVID cases. Unemployment increased as a consequence of lockdown measures imposed as a result of COVID-19, and unemployed people may be more likely to make trips away from home possibly as a result of having additional time or the pressure of providing income. </p>
 <h3> Figure 4: R Values (Pearson's Correlation) Correlated with COVID-19 Cases per 100k</h3>
 
-<table border="1" class="dataframe output_html rendered_html output_subarea output_execute_result">
+<div class="table-responsive"><table border="1" class="dataframe output_html rendered_html output_subarea output_execute_result">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4568,8 +4444,8 @@ The data suggest that total farm started with low COVID cases, and started to cl
       <td>&nbsp;0.187</td>
     </tr>
   </tbody>
-</table>
-<table border="1" class="dataframe output_html rendered_html output_subarea output_execute_result">
+</table></div>
+<div class="table-responsive"><table border="1" class="dataframe output_html rendered_html output_subarea output_execute_result">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -4646,15 +4522,15 @@ The data suggest that total farm started with low COVID cases, and started to cl
       <td>-0.241</td>
     </tr>
   </tbody>
-</table>
-<p>We calculated the Pearson's correlation coefficient (r) of each county's COVID-19 case and laborforce statistics using the <a href=https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html>scipy.stats module</a>. After sorting by largest r values, we identified the categories with the highest correlation to COVID-19 case rates, namely farming and unemployment. We visualized these correlations below.</p>
+</table></div>
+<p>We calculated the Pearson's correlation coefficient (r) of each county's COVID-19 case and laborforce statistics using the <a href=https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html>scipy.stats Python module</a>. After sorting by largest r values, we identified the categories with the highest correlation to COVID-19 case rates, namely farming and unemployment. We visualized these correlations below.</p>
 <h3 id="b49cb5be-3811-46dd-994e-834a574c1304" class="">Figure 5a: COVID-19 Case Rate and Total Farm Laborforce of CA Counties - Scatter Plot</h3>
-<div class="videoWrapper"><iframe src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/5a_covid_total-farm-employment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
-<p>We identified a moderate correlation between total farm labor force and case rates in California counties. This is consistent with our null hypothesis and (anecdotally) consistent with the Guardian article linked in the introduction that reported on the agricultural sector's risk of COVID-19 infection.</p>
+<div class="videoWrapper"><iframe src="./covid/5a_covid_total-farm-employment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
+<p>We identified a moderate correlation between Total Farm labor force and case rates in California counties. This is consistent with our null hypothesis and (anecdotally) consistent with the Guardian article linked in the introduction that reported on the agricultural sector's risk of COVID-19 infection.</p>
 <h3 id="5b" class="">Figure 5b: COVID-19 Case Rate and Total Farm Laborforce of CA Counties, July 2020 - Choropleth</h3>
-<div class="videoWrapper"><iframe src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/5b_ca_covid_farm_map.html" height="90%" width="100%" title="Figure 5b" frameBorder="0"></iframe></div>
+<div class="videoWrapper"><iframe src="./covid/5b_ca_covid_farm_map.html" height="90%" width="100%" title="Figure 5b" frameBorder="0"></iframe></div>
 <h3 id="e9c24a08-6c32-46f0-9c8e-503d2bcde7ce" class="">Figure 6a: COVID-19 Case Rate and Unemployment Rate of CA Counties - Scatter Plot</h3>
-<div class="videoWrapper"><iframe  src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/6a_covid_unemployment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
+<div class="videoWrapper"><iframe  src="./covid/6a_covid_unemployment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
 <p>There is a moderate correlation between county unemployment and case rates. Causality may work both ways in this case, as higher case rates may cause more business closures leading to higher unemployment; or high unemployment leading to more job-seekers taking odd-jobs/gig-work that involve public interaction or leaving home for public assistance.</p>
 <h3 id="End" class="">Figure 6b: COVID-19 Case Rate and Unemployment Rate of CA Counties, July 2020 - Choropleth</h3>
-<div class="videoWrapper"><iframe src="https://elevationusvistttest.s3-us-west-1.amazonaws.com/covid-figures/6b_ca_covid_unemployment_map.html" height="90%" width="100%" title="Figure 6b" frameBorder="0"></iframe></div><h2 id="dc7f0d7f-07aa-4c91-9e2f-fb43d343884e" class="">Conclusion</h2><blockquote id="Conclusion" class="">“You can appear to contain the spread among middle-class workers but when it reaches those workers who are furthest on the margins, who are most disadvantaged, the virus is going to spread” - Edward Flores, sociology professor at the University of California, Merced</blockquote><p id="5adcc589-7701-4b9e-83fc-acd58d7faf97" class="">It may be the case that agricultural workers and the unemployed are at greater risk of contracting COVID-19. This information could prove informative to decision makers, industry leaders, and the general public alike for implementing measures to prevent the spread of COVID-19, and appropriately prioritizing resources to those most at-risk of infection. More research can be done to determine if industry employment is of significance when taking other important demographics into consideration such as age, or the population density of an area. Another area of interest to future researchers may be case rates specifically for California's homeless population.</p></div></article></body></html></div></article></body></html>
+<div class="videoWrapper"><iframe src="./covid/6b_ca_covid_unemployment_map.html" height="90%" width="100%" title="Figure 6b" frameBorder="0"></iframe></div><h2 id="Conclusion" class=""><i class="fas fa-check-circle"></i> Conclusion</h2><blockquote class="">“You can appear to contain the spread among middle-class workers but when it reaches those workers who are furthest on the margins, who are most disadvantaged, the virus is going to spread” - Edward Flores, sociology professor at the University of California, Merced</blockquote><p id="5adcc589-7701-4b9e-83fc-acd58d7faf97" class="">It may be the case that agricultural workers and the unemployed are at greater risk of contracting COVID-19. This information could prove informative to decision makers, industry leaders, and the general public alike for implementing measures to prevent the spread of COVID-19, and appropriately prioritizing resources to those most at-risk of infection. More research can be done to determine if industry employment is of significance when taking other important demographics into consideration such as age, or the population density of an area. Another area of interest to future researchers may be case rates specifically for California's homeless population.</p></div></article></body></html></div></article></body></html>
