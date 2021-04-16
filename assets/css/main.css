@@ -8,6 +8,17 @@ body, div, h1, p,
 	vertical-align: baseline;
 	text-decoration: none;
 	}
+#backgroundz{
+  z-index:-10;
+  background-image: linear-gradient(90deg, #FFF000,#32CD32);
+  height: 500%;
+  width: 500%;
+  top:-200%;
+  left:-200%;
+  position: fixed;
+  display:inline;
+  background-size: cover;
+}
 span{
   padding: 2.3% 3% 2%;
 }
@@ -61,8 +72,7 @@ span{
 		display: flex;
 	}}
 html {
-  height: 100% !important;}
+}
 body {
-  height: 100% !important;
 	background-image: linear-gradient(90deg, #FFF000,#32CD32);
 }
