@@ -1,5 +1,5 @@
 /*
-*	 Title: Pixel Portfolio Stylesheet
+*  Title: Pixel Portfolio Stylesheet
 *  Author: Krishnakanth Alagiri (KK)
 *  Repo: https://github.com/KrishnaAlagiri/Pixel-Portfolio-Webite
 *  Issues: https://github.com/KrishnaAlagiri/Pixel-Portfolio-Webite/issues
@@ -114,7 +114,7 @@ transition:.5s ease all;
 .hero-text {
 position:absolute;
 z-index:10;
-top:50%;
+top:40%;
 left:50%;
 transform:translate(-50%, -50%);
 text-align:center;
@@ -154,19 +154,7 @@ position:absolute;
 height:100%;
 width:100%;
 top right bottom left:0;
-background:rgba(236, 175, 8, 0.2);
 }
-.xtreme {
-   position: relative; 
-   top: -3px; 
-   left: -3px; 
-   color:#FFFF00;
-   text-shadow: 1px 1px #32CD32, 
-                2px 2px #32CD32, 
-                3px 3px #32CD32, 
-                4px 4px #32CD32, 
-                5px 5px #32CD32, 
-                6px 6px #32CD32;}
 /* About Section */
 #about {
 display: flex;
@@ -484,7 +472,7 @@ widlinearth: 100%;
 }
 .social {
 text-align: right;
-/*	margin-top: -3.7em;	*/
+/*  margin-top: -3.7em; */
 }
 .social a {
 color: #74808a;
@@ -687,7 +675,7 @@ display: none;
 .social-mob {
 text-align: right;
 display: inline-block;
-/*	margin-top: -3.7em;	*/
+/*  margin-top: -3.7em; */
 }
 .social-mob a {
 color: #74808a;
