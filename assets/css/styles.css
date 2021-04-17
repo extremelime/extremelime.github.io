@@ -60,8 +60,9 @@ margin: 0 auto;
 background: #db8e35;
 }
 .btn {
-color:inherit;
-font-family: "retro", sans-serif;
+color:  #424242;
+font-family: "Arial", sans-serif;
+font-weight: bold;
 font-size: 0.9em;
 background: #FFF;
 padding: 0.3rem 3.4rem;
@@ -187,7 +188,7 @@ min-height: 1px;
 font-size: 1.6em;
 }
 #about p {
-color: #74808a;
+color:  #424242;
 margin: 0;
 padding-bottom: 30px;
 padding-right: 11em;
@@ -618,8 +619,9 @@ padding-left: 1em;
 /* If the orientation of the screen is Portrait */
 @media only screen and (orientation: Portrait) {
 .btn {
-color:inherit;
-font-family: "retro", sans-serif;
+color: #424242;
+font-family: "Arial", sans-serif;
+font-weight: bold;
 font-size: 0.9em;
 background: #FFF;
 padding: 0.3rem 3.4rem;
