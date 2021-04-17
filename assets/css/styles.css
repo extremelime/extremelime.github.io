@@ -63,11 +63,12 @@ background: #db8e35;
 color:inherit;
 font-family: "retro", sans-serif;
 font-size: 0.9em;
-background: white;
+background: #FFF;
 padding: 0.3rem 3.4rem;
-border: 3px solid black;
+border: 3px solid #32cd32;
+border-radius:0.3rem;
 margin-right: 2.6rem;
-box-shadow: 0 0 0 black;
+box-shadow: 0 0 0 #32cd32;
 transition: all 0.2s;
 padding-top: 10px;
 }
@@ -75,13 +76,14 @@ padding-top: 10px;
 margin: 0;
 }
 a, .slider {
+    text-decoration: none;
 }
 .btn:hover {
-box-shadow: 0.4rem 0.4rem 0rem black;
+box-shadow: 0.4rem 0.4rem 0rem #32cd32;
 /*transform: translate(-0.4rem, -0.4rem);*/
 }
 .btn:active {
-box-shadow: 0 0 0 black;
+box-shadow: 0 0 0 #32cd32;
 transform: translate(0, 0);
 }
 /* Hero section */
@@ -619,12 +621,13 @@ padding-left: 1em;
 color:inherit;
 font-family: "retro", sans-serif;
 font-size: 0.9em;
-background: white;
+background: #FFF;
 padding: 0.3rem 3.4rem;
-border: 3px solid black;
+border: 3px solid #32cd32;
 margin-right: 2.6rem;
-box-shadow: 0 0 0 black;
+box-shadow: 0 0 0 #32cd32;
 transition: all 0.2s;
+
 }
 .hero-text h1 {
 font-size:2em;
