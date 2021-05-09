@@ -4259,7 +4259,7 @@ function dropdownMenu() {
 </span>--><span class=page-subtitle>Jake Wigal, Dongyu Yang</span><div class="page-body">
 <p class="">COVID-19 case numbers have increased in California despite action from state and municipal governments meant to slow the spread of the virus. New governmental policies often involve modifying the activity of economic participants in a way that attempts to reduce physical contact between people. There are challenges to the uniform implementation of social-distancing guidelines across industries that have led to varying approaches to handling these new policies. For example, while it is possible for universities to switch to an online-only format to limit COVID-19 exposure, the farm industry relies on physical labor that must be performed irrespective of whether workers are safe or healthy.</p><figure id="b9ce0f5d-45bc-48c0-9f6b-539edbdd67cd"><a target="_blank" href="https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">&#x27;Everyone tested positive&#x27;: Covid devastates farm workers</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.guim.co.uk/images/favicon-32x32.ico" class="icon bookmark-icon"/>https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers</div></div><img src="https://i.guim.co.uk/img/media/c30e7d6f5d12e047f86eb591ffda5d676a0e18ca/0_232_3500_2101/master/3500.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=bac2a1afe6e87962247972520ccb1d77" class="bookmark-image"/></a></figure><p id="6fe9e061-823a-476a-b27e-73579404717b" class="">There have been reports of some essential workers feeling unsafe in their working conditions. An assessment of risk across industries could inform policy makers, industry leaders, and members of the general public who may be employees or consumers of a specific industry, on whether additional precautions or guidelines may be necessary to conduct business in a safe and productive manner.
 
-By analyzing economic data for the CA Employment Development Department and State of California COVID-19 Health Data (March 2020 - July 2020), we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Code"><i class="fas fa-code"></i> Source Code</h2><p>View the source code on Github.</p><figure id="aee60d4d-1fbc-4220-a00b-aac0ae78ef3a"><a target="_blank" href="https://github.com/extremelime/covid19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">extremelime/covid19</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/extremelime/covid19</div></div><img src="https://repository-images.githubusercontent.com/296238251/57229380-f874-11ea-9c01-f576f6b9aa1d" class="bookmark-image"/></a></figure><h2 id="Data" class=""> <i class="fas fa-table"></i> Dataset Sources</h2><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
+By analyzing economic data for the CA Employment Development Department and State of California COVID-19 Health Data (March 2020 - September 2020), we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Code"><i class="fas fa-code"></i> Source Code</h2><p>View the source code on Github.</p><figure id="aee60d4d-1fbc-4220-a00b-aac0ae78ef3a"><a target="_blank" href="https://github.com/extremelime/covid19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">extremelime/covid19</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/extremelime/covid19</div></div><img src="https://repository-images.githubusercontent.com/296238251/57229380-f874-11ea-9c01-f576f6b9aa1d" class="bookmark-image"/></a></figure><h2 id="Data" class=""> <i class="fas fa-table"></i> Dataset Sources</h2><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
 <p id="ca36d6a3-33f7-4b33-a838-4c12dd36c7c2" class="">Up-to-date COVID-19 data were freely available from the California Department of Public Health on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/group/covid-19">ca.gov</a>). These data contained the amount of new COVID-19 cases and deaths in each county reported on each day, since 18 Mar 2020. There were a total of about 10,000 rows of entries stored in the csv format, with the following headers:</p>
 <div class="table-responsive"><table border="1" class="dataframe">
   <thead>
@@ -4346,13 +4346,13 @@ By analyzing economic data for the CA Employment Development Department and Stat
 <h3 id="a03effb5-4646-4f55-83c0-2b9e233a2458"><span class="datalink"><a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">County Boundaries</a></span></h3>
 <p id="c69e6625-df45-425c-8738-0e2964908c97" class="">To produce mapped visualizations of county data, we utilized 2016 TIGER/Line Shapefiles, accessible on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">ca.gov</a>).</p>
 <h3 id="e232f037-1788-44ac-aa11-afdd480c645c"><span class="datalink"><a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a></span></h3>
-<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p><p id="2c222762-59b2-4c6e-bc84-f0833d38abfa" class=""></p><h2 id="Analysis"><i class="fas fa-calculator"></i> Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/algorithm-flowchart.png"><img src="./covid/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
+<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID-19 infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p><p id="2c222762-59b2-4c6e-bc84-f0833d38abfa" class=""></p><h2 id="Analysis"><i class="fas fa-calculator"></i> Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/algorithm-flowchart.png"><img src="./covid/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
 
 The analysis objective was to derive insights from the monthly changes in COVID-19 cases and proportion of jobs both at the county and state level. This was achieved by examining if there were any significant correlations between monthly COVID-19 cases and monthly industry jobs (i.e. if COVID-19 cases may be lower or higher than average in a particular industry). All data were in the csv format and parsed into dataframes using the Pandas Python package, with the exception of the COVID-19 data which were parsed into a dataframe from an API. The data were then merged according to common county names and dates. Fourteen counties (California has 58) did not report data in 2020, so they were excluded from industry data calculations. This does not apply to unemployment data, however, which were reported for every county in the timeframe of interest.</p>
 <h2 id="Visualization"><i class="fas fa-chart-bar"></i> Visualization</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/visualization-flowchart.png"><img src="./covid/visualization-flowchart.png"/></a></figure><p>Scatter plots, bar plots and choropleth maps were subsequently generated using the processed dataframes.
-<ul><li>Scatter plots were chosen for analyzing the correlation between COVID cases and % of jobs in a particular sector across the various counties. A strong correlation would indicate a possible relationship between industry activity and COVID infection rate.</li>
-<li>Bar plots were chosen for analysing the distribution of workforce across the various industries, which would help to quantify differences in jobs/covid cases between different industries.</li>
-<li>Choropleth maps helped to display geospatial distribution of the workforce and COVID cases. These maps can be used to identify any clusters where COVID cases or certain industries may be concentrated.</li></ul></p><p>All the bar, line and scatter charts below were generated using Plotly to enable mouse-over queries and sliders to switch between different months and charts. Choropleth maps were generated using Folium and displayed in html using Leaflet. A few HTML tweaks were required to calibrate the proper display bounds and zooming parameters that would enable the smoothest user experience.</p>
+<ul><li>Scatter plots were chosen for analyzing the correlation between COVID-19 cases and % of jobs in a particular sector across the various counties. A strong correlation would indicate a possible relationship between industry activity and COVID-19 infection rate.</li>
+<li>Bar plots were chosen for analysing the distribution of workforce across the various industries, which would help to quantify differences in jobs/COVID-19 cases between different industries.</li>
+<li>Choropleth maps helped to display geospatial distribution of the workforce and COVID-19 cases. These maps can be used to identify any clusters where COVID-19 cases or certain industries may be concentrated.</li></ul></p><p>All the bar, line and scatter charts below were generated using Plotly to enable mouse-over queries and sliders to switch between different months and charts. Choropleth maps were generated using Folium and displayed in html using Leaflet. A few HTML tweaks were required to calibrate the proper display bounds and zooming parameters that would enable the smoothest user experience.</p>
 <h3 id="b49cb5be-3811-46dd-994e-834a574c1304" class="">Figure 1: COVID-19 Cases per 100k in California (CA)</h3>
 <div class="videoWrapper"><iframe src="./covid/1_covid_cases.html" height="90%" width="100%" title="Figure 1" frameBorder="0"></iframe></div>
 <p id="1435a851-e34b-4c99-9253-fc2530151619" class="">Case rates in California have been increasing. We want to examine the relationship between the case rates and the proportion of industry in each county. </p>
@@ -4362,86 +4362,110 @@ The analysis objective was to derive insights from the monthly changes in COVID-
 
 COVID-19 weighted proportions were calculated by taking the industry proportions of each county, multiplying them by the case numbers of each county, and then summing by industry before creating new proportions (Figure 2, Center). To highlight any changes between the two proportions, we calculated and plotted the difference of the two proportions (Figure 2, Right).</p>
 <h3 id="36507d3e-409f-4a36-8f3b-dd43ca6f79e6" class="">Figure 3: Change in Proportion of Industries After Weighted by COVID-19 Cases - Sorted by Mean</h3><div class="videoWrapper"><iframe  src="./covid/3_change_proportion_industries_ca.html" height="90%" width="100%" title="Figure 3" frameBorder="0"></iframe></div>
-<p>Looking at the changes in covid-weighted industries, we noted that essential services (such as transportation and warehousing) stayed positive throughout this period, indicating potential increased contributions of new COVID cases from counties that relied on such industries. In addition, some of the industries showed reduction in case contributions after weighting such as Professional/Business services, possibly due to the introduction of work from home arrangements. The largest increases in case contribution after weighting came from Total Farm and the unemployed. 
+<p>Looking at the changes in covid-weighted industries, we noted that essential services (such as transportation and warehousing) stayed positive throughout this period, indicating potential increased contributions of new COVID-19 cases from counties that relied on such industries. In addition, some of the industries showed reduction in case contributions after weighting such as Professional/Business services, possibly due to the introduction of work from home arrangements. The largest increases in case contribution after weighting came from Total Farm and the unemployed. 
 
-The data suggest that Total Farm began with low COVID cases, and started to climb over the months, possibly due to the vulnerability of farm workers and lack of protective coverings (e.g. masks) as mentioned in the Guardian article. The data unexpectedly showed unemployment as a significant contributor to new COVID cases. Unemployment increased as a consequence of lockdown measures imposed as a result of COVID-19, and unemployed people may be more likely to make trips away from home possibly as a result of having additional time or the pressure of providing income. </p>
+The data suggest that Total Farm began with low COVID-19 cases, and started to climb over the months, possibly due to the vulnerability of farm workers and lack of protective coverings (e.g. masks) as mentioned in the Guardian article. The data unexpectedly showed unemployment as a significant contributor to new COVID-19 cases. Unemployment increased as a consequence of lockdown measures imposed as a result of COVID-19, and unemployed people may be more likely to make trips away from home possibly as a result of having additional time or the pressure of providing income. </p>
 <h3> Figure 4: R Values (Pearson's Correlation) Correlated with COVID-19 Cases per 100k</h3>
 
 <div class="table-responsive"><table border="1" class="dataframe output_html rendered_html output_subarea output_execute_result">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th bgcolor='#fff3cc'>Total Farm</th>
-      <th bgcolor='#fff3cc'>Unemployed</th>
-      <th>Wholesale Trade</th>
-      <th>Transp., Warehousing & Utilities</th>
-      <th>Trade, Transp. & Utilities</th>
-      <th>Manufacturing</th>
-      <th>Nondurable Goods</th>
-      <th>Professional & Business Services</th>
-      <th>Retail Trade</th>
+      <th>Total Farm</th>
+      <th>Unemployed</th>
+      <th>Leisure &amp; Hospitality</th>
+      <th>Construction</th>
+      <th>Durable Goods</th>
+      <th>Educational &amp; Health Services</th>
+      <th>Financial Activities</th>
+      <th>Govt.</th>
+      <th>Information</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>March</th>
-      <td>-0.259</td>
-      <td>-0.345</td>
-      <td>-0.058</td>
-      <td>-0.177</td>
-      <td>-0.224</td>
-      <td>-0.161</td>
-      <td>-0.109</td>
-      <td>&nbsp;0.090</td>
-      <td>-0.056</td>
+      <td>-0.176</td>
+      <td>-0.309</td>
+      <td bgcolor='#fff3cc'>0.633</td>
+      <td>0.057</td>
+      <td>0.067</td>
+      <td>-0.262</td>
+      <td>0.469</td>
+      <td>-0.112</td>
+      <td>0.185</td>
     </tr>
     <tr>
       <th>April</th>
-      <td>&nbsp;0.094</td>
-      <td>&nbsp;0.201</td>
-      <td>&nbsp;0.394</td>
-      <td>&nbsp;0.303</td>
-      <td>&nbsp;0.437</td>
-      <td>&nbsp;0.245</td>
-      <td>&nbsp;0.144</td>
-      <td>&nbsp;0.475</td>
-      <td>&nbsp;0.329</td>
+      <td>0.201</td>
+      <td>0.257</td>
+      <td>0.162</td>
+      <td>0.105</td>
+      <td>0.171</td>
+      <td>0.127</td>
+      <td>0.254</td>
+      <td>-0.220</td>
+      <td>0.259</td>
     </tr>
     <tr>
       <th>May</th>
-      <td>&nbsp;0.282</td>
-      <td>&nbsp;0.492</td>
-      <td>&nbsp;0.181</td>
-      <td>&nbsp;0.204</td>
-      <td>&nbsp;0.288</td>
-      <td>&nbsp;0.070</td>
-      <td>-0.024</td>
-      <td>&nbsp;0.107</td>
-      <td>&nbsp;0.181</td>
+      <td>0.304</td>
+      <td bgcolor='#fff3cc'>0.525</td>
+      <td>-0.150</td>
+      <td>-0.101</td>
+      <td>0.009</td>
+      <td>0.081</td>
+      <td>0.072</td>
+      <td>-0.017</td>
+      <td>0.033</td>
     </tr>
     <tr>
       <th>June</th>
-      <td>&nbsp;0.323</td>
-      <td>&nbsp;0.523</td>
-      <td>&nbsp;0.233</td>
-      <td>&nbsp;0.291</td>
-      <td>&nbsp;0.319</td>
-      <td>&nbsp;0.111</td>
-      <td>&nbsp;0.028</td>
-      <td>&nbsp;0.043</td>
-      <td>&nbsp;0.264</td>
+      <td>0.379</td>
+      <td bgcolor='#fff3cc'>0.546</td>
+      <td>-0.226</td>
+      <td>0.007</td>
+      <td>0.001</td>
+      <td>0.141</td>
+      <td>0.098</td>
+      <td>-0.105</td>
+      <td>0.087</td>
     </tr>
     <tr>
       <th>July</th>
-      <td>&nbsp;0.562</td>
-      <td>&nbsp;0.514</td>
-      <td>&nbsp;0.502</td>
-      <td>&nbsp;0.447</td>
-      <td>&nbsp;0.374</td>
-      <td>&nbsp;0.309</td>
-      <td>&nbsp;0.281</td>
-      <td>&nbsp;0.240</td>
-      <td>&nbsp;0.187</td>
+      <td bgcolor='#fff3cc'>0.540</td>
+      <td bgcolor='#fff3cc'>0.501</td>
+      <td>-0.185</td>
+      <td>-0.029</td>
+      <td>-0.013</td>
+      <td>0.080</td>
+      <td>0.079</td>
+      <td>-0.202</td>
+      <td>-0.030</td>
+    </tr>
+    <tr>
+      <th>August</th>
+      <td bgcolor='#fff3cc'>0.556</td>
+      <td>0.332</td>
+      <td>-0.231</td>
+      <td>-0.078</td>
+      <td>-0.041</td>
+      <td>0.168</td>
+      <td>0.012</td>
+      <td>-0.296</td>
+      <td>-0.118</td>
+    </tr>
+    <tr>
+      <th>September</th>
+      <td bgcolor='#fff3cc'>0.511</td>
+      <td>0.303</td>
+      <td>-0.277</td>
+      <td>-0.133</td>
+      <td>0.054</td>
+      <td>0.314</td>
+      <td>0.056</td>
+      <td>-0.309</td>
+      <td>-0.051</td>
     </tr>
   </tbody>
 </table></div>
@@ -4449,88 +4473,112 @@ The data suggest that Total Farm began with low COVID cases, and started to clim
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Financial Activities</th>
-      <th>Natural Resources, Mining & Construction</th>
-      <th>Construction</th>
-      <th>Information</th>
-      <th>Educational & Health Services</th>
-      <th>Durable Goods</th>
+      <th>Manufacturing</th>
+      <th>Natural Resources, Mining &amp; Construction</th>
+      <th>Nondurable Goods</th>
       <th>Other Services</th>
-      <th>Leisure & Hospitality</th>
-      <th>Govt.</th>
+      <th>Professional &amp; Business Services</th>
+      <th>Retail Trade</th>
+      <th>Trade, Transp. &amp; Utilities</th>
+      <th>Transp., Warehousing &amp; Utilities</th>
+      <th>Wholesale Trade</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>March</th>
-      <td>&nbsp;0.250</td>
-      <td>-0.069</td>
-      <td>&nbsp;0.019</td>
-      <td>&nbsp;0.094</td>
-      <td>-0.401</td>
-      <td>-0.016</td>
-      <td>-0.059</td>
-      <td>&nbsp;0.487</td>
-      <td>&nbsp;0.121</td>
+      <td>-0.067</td>
+      <td>&nbsp;0.120</td>
+      <td>-0.039</td>
+      <td>&nbsp;0.043</td>
+      <td>&nbsp;0.258</td>
+      <td>&nbsp;0.084</td>
+      <td>-0.070</td>
+      <td>-0.112</td>
+      <td>&nbsp;0.064</td>
     </tr>
     <tr>
       <th>April</th>
-      <td>&nbsp;0.506</td>
-      <td>&nbsp;0.273</td>
-      <td>&nbsp;0.221</td>
-      <td>&nbsp;0.398</td>
-      <td>&nbsp;0.045</td>
-      <td>&nbsp;0.235</td>
-      <td>&nbsp;0.188</td>
-      <td>&nbsp;0.104</td>
-      <td>-0.296</td>
+      <td>&nbsp;0.173</td>
+      <td>-0.001</td>
+      <td>&nbsp;0.112</td>
+      <td>-0.021</td>
+      <td>&nbsp;0.334</td>
+      <td>&nbsp;0.086</td>
+      <td>&nbsp;0.208</td>
+      <td>&nbsp;0.274</td>
+      <td>&nbsp;0.302</td>
     </tr>
     <tr>
       <th>May</th>
-      <td>&nbsp;0.126</td>
-      <td>-0.024</td>
-      <td>-0.024</td>
-      <td>&nbsp;0.102</td>
-      <td>&nbsp;0.028</td>
-      <td>&nbsp;0.057</td>
-      <td>-0.039</td>
-      <td>-0.051</td>
-      <td>-0.082</td>
+      <td>&nbsp;0.022</td>
+      <td>-0.113</td>
+      <td>-0.018</td>
+      <td>-0.117</td>
+      <td>&nbsp;0.064</td>
+      <td>&nbsp;0.004</td>
+      <td>&nbsp;0.107</td>
+      <td>&nbsp;0.139</td>
+      <td>&nbsp;0.106</td>
     </tr>
     <tr>
       <th>June</th>
-      <td>&nbsp;0.039</td>
-      <td>-0.077</td>
-      <td>-0.048</td>
-      <td>&nbsp;0.028</td>
-      <td>&nbsp;0.026</td>
-      <td>-0.004</td>
-      <td>-0.049</td>
-      <td>-0.184</td>
-      <td>&nbsp;0.009</td>
+      <td>&nbsp;0.128</td>
+      <td>-0.052</td>
+      <td>&nbsp;0.097</td>
+      <td>-0.050</td>
+      <td>&nbsp;0.168</td>
+      <td>&nbsp;0.223</td>
+      <td>&nbsp;0.304</td>
+      <td>&nbsp;0.294</td>
+      <td>&nbsp;0.274</td>
     </tr>
     <tr>
       <th>July</th>
-      <td>&nbsp;0.164</td>
-      <td>&nbsp;0.138</td>
-      <td>&nbsp;0.128</td>
-      <td>&nbsp;0.074</td>
-      <td>&nbsp;0.057</td>
-      <td>&nbsp;0.055</td>
-      <td>&nbsp;0.040</td>
-      <td>-0.226</td>
-      <td>-0.241</td>
+      <td>&nbsp;0.319</td>
+      <td>-0.127</td>
+      <td>&nbsp;0.331</td>
+      <td>-0.035</td>
+      <td>&nbsp;0.118</td>
+      <td>&nbsp;0.167</td>
+      <td>&nbsp;0.342</td>
+      <td>&nbsp;0.438</td>
+      <td>&nbsp;0.395</td>
+    </tr>
+    <tr>
+      <th>August</th>
+      <td>&nbsp;0.361</td>
+      <td>-0.157</td>
+      <td>&nbsp;0.278</td>
+      <td>&nbsp;0.019</td>
+      <td>&nbsp;0.042</td>
+      <td>&nbsp;0.202</td>
+      <td>&nbsp;0.347</td>
+      <td>&nbsp;0.422</td>
+      <td>&nbsp;0.313</td>
+    </tr>
+    <tr>
+      <th>September</th>
+      <td>&nbsp;0.294</td>
+      <td>-0.132</td>
+      <td>&nbsp;0.098</td>
+      <td>-0.032</td>
+      <td>&nbsp;0.064</td>
+      <td>&nbsp;0.215</td>
+      <td>&nbsp;0.324</td>
+      <td>&nbsp;0.343</td>
+      <td>&nbsp;0.329</td>
     </tr>
   </tbody>
 </table></div>
-<p>We calculated the Pearson's correlation coefficient (r) of each county's COVID-19 case and laborforce statistics using the <a href=https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html>scipy.stats Python module</a>. After sorting by largest r values, we identified the categories with the highest correlation to COVID-19 case rates, namely farming and unemployment. We visualized these correlations below.</p>
+<p>We calculated the Pearson's correlation coefficient (r) of each county's COVID-19 case and laborforce statistics using the <a href=https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html>scipy.stats Python module</a>. After sorting by largest r values, we identified the categories with the strongest correlations to COVID-19 case rates, defined here to mean an r value greater than 0.5. Leisure & Hospitality had an r value greater than 0.5 for only one of the months in the period of interest and was not examined in further detail. It should be noted however, that the leisure and hospitality industry was the industry with the most job losses during the onset of the pandemic (<a href="https://www.ustravel.org/press/leisure-hospitality-accounts-whopping-39-jobs-lost-pandemic">Bureau of Labor Statistics</a>). The sudden onset of travel restrictions and industry layoffs may be related to the initial moderate correlation and subsequent weak correlations calculated in this analysis. We visualized correlations below between the only two categories with moderate correlations across multiple months, Total Farm and Unemployed.</p>
 <h3 id="b49cb5be-3811-46dd-994e-834a574c1304" class="">Figure 5a: COVID-19 Case Rate and Total Farm Laborforce of CA Counties - Scatter Plot</h3>
 <div class="videoWrapper"><iframe src="./covid/5a_covid_total-farm-employment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
-<p>We identified a moderate correlation between Total Farm labor force and case rates in California counties. This is consistent with our null hypothesis and (anecdotally) consistent with the Guardian article linked in the introduction that reported on the agricultural sector's risk of COVID-19 infection.</p>
-<h3 id="5b" class="">Figure 5b: COVID-19 Case Rate and Total Farm Laborforce of CA Counties, July 2020 - Choropleth</h3>
+<p>We identified a moderate correlation between Total Farm labor force and case rates in California counties from July to September. This is consistent with our null hypothesis and (anecdotally) consistent with the Guardian article linked in the introduction that reported on the agricultural sector's risk of COVID-19 infection.</p>
+<h3 id="5b" class="">Figure 5b: COVID-19 Case Rate and Total Farm Laborforce of CA Counties, September 2020 - Choropleth</h3>
 <div class="videoWrapper"><iframe src="./covid/5b_ca_covid_farm_map.html" height="90%" width="100%" title="Figure 5b" frameBorder="0"></iframe></div>
 <h3 id="e9c24a08-6c32-46f0-9c8e-503d2bcde7ce" class="">Figure 6a: COVID-19 Case Rate and Unemployment Rate of CA Counties - Scatter Plot</h3>
 <div class="videoWrapper"><iframe  src="./covid/6a_covid_unemployment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
-<p>There is a moderate correlation between county unemployment and case rates. Causality may work both ways in this case, as higher case rates may cause more business closures leading to higher unemployment; or high unemployment leading to more job-seekers taking odd-jobs/gig-work that involve public interaction or leaving home for public assistance.</p>
+<p>There is a moderate correlation between county unemployment and case rates from May to July. Causality may work both ways in this case, as higher case rates may cause more business closures leading to higher unemployment; or high unemployment leading to more job-seekers taking odd-jobs/gig-work that involve public interaction or leaving home for public assistance.</p>
 <h3 id="End" class="">Figure 6b: COVID-19 Case Rate and Unemployment Rate of CA Counties, July 2020 - Choropleth</h3>
 <div class="videoWrapper"><iframe src="./covid/6b_ca_covid_unemployment_map.html" height="90%" width="100%" title="Figure 6b" frameBorder="0"></iframe></div><h2 id="Conclusion" class=""><i class="fas fa-check-circle"></i> Conclusion</h2><blockquote class="">“You can appear to contain the spread among middle-class workers but when it reaches those workers who are furthest on the margins, who are most disadvantaged, the virus is going to spread” - Edward Flores, sociology professor at the University of California, Merced</blockquote><p id="5adcc589-7701-4b9e-83fc-acd58d7faf97" class="">It may be the case that agricultural workers and the unemployed are at greater risk of contracting COVID-19. This information could prove informative to decision makers, industry leaders, and the general public alike for implementing measures to prevent the spread of COVID-19, and appropriately prioritizing resources to those most at-risk of infection. More research can be done to determine if industry employment is of significance when taking other important demographics into consideration such as age, or the population density of an area. Another area of interest to future researchers may be case rates specifically for California's homeless population.</p></div></article></body></html></div></article></body></html>
