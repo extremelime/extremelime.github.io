@@ -14,6 +14,43 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+.accordion {
+  background-color: #fff;
+
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  text-align: left;
+  outline: none;
+
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #eee;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
 #lime {
   color: #184674;
   position: absolute;
@@ -67,7 +104,7 @@ h3 {
   letter-spacing: -0.01em;
   line-height: 1.2;
   font-weight: 600;
-  margin-bottom: 0;
+
 }
 
 .page-title {
@@ -88,7 +125,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
+
 }
 
 h3 {
@@ -882,33 +919,33 @@ i.fa.fa-folder {
  font-size: 18px;
  -moz-osx-font-smoothing: grayscale;
 }
-#running .panel-group .panel .panel-heading {
+#running .panel-group .panel-heading {
  font-size: 14pt;
  color: #303030;
  padding: 8px 8px;
  background: #e4e4e4;
  background-color: #e4e4e4;
 }
-#running .panel-group .panel .panel-heading a {
+#running .panel-group .panel-heading a {
  font-size: 14pt;
  color: #303030;
 }
-#running .panel-group .panel .panel-heading a:focus,
-#running .panel-group .panel .panel-heading a:hover {
+#running .panel-group .panel-heading a:focus,
+#running .panel-group .panel-heading a:hover {
  font-size: 14pt;
  color: #303030;
 }
-#running .panel-group .panel .panel-body .list_container .list_item {
+#running .panel-group .panel-body .list_container .list_item {
  background: #f4f4f4;
  background-color: #f4f4f4;
  padding: 2px;
  border-bottom: 2px solid #dedede;
 }
-#running .panel-group .panel .panel-body .list_container .list_item:hover {
+#running .panel-group .panel-body .list_container .list_item:hover {
  background: #f4f4f4;
  background-color: #f4f4f4;
 }
-#running .panel-group .panel .panel-body {
+#running .panel-group .panel-body {
  padding: 2px;
 }
 button#refresh_running_list {
@@ -2113,26 +2150,7 @@ div.modal-footer > button:hover {
  opacity: 0.85;
  background-color: notebook-bg;
 }
-div.panel,
-div.panel-default,
-.panel,
-.panel-default {
- font-family: sans-serif;
- font-size: 11.5pt;
- background-color: #f4f4f4;
- color: #303030;
- margin-bottom: 14px;
- border: 0;
- box-shadow: none;
-}
-div.panel > .panel-heading,
-div.panel-default > .panel-heading {
- font-size: 14pt;
- color: #303030;
- background: #e4e4e4;
- background-color: #e4e4e4;
- border: 0;
-}
+
 .modal .modal-dialog {
  min-width: 950px;
  margin: 50px auto;
@@ -4229,7 +4247,6 @@ display:none;
 
   h2 {
   font-size: 3.5rem;
-  margin-top: 3.5rem;
   }
 
   h3 {

@@ -1,102 +1,20 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet"><link href="covid/static/css/style.css" rel="stylesheet" type="text/css"/><script src="https://kit.fontawesome.com/6d3e20c20f.js" crossorigin="anonymous"></script><title>Does Industry Employment Affect COVID-19 Case Rates?</title></head><body><header><a id="lime" href="https://extremelime.com"><i class="fas fa-long-arrow-alt-left"></i></a><div class="headerimage"><img src="./covid/covid-header.svg"></div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet"><link href="covid/static/css/style.css" rel="stylesheet" type="text/css"/><script src="https://kit.fontawesome.com/6d3e20c20f.js" crossorigin="anonymous"></script>
+  <title>Does Industry Employment Affect COVID-19 Case Rates?</title></head><body><header><a id="lime" href="https://extremelime.com"><i class="fas fa-long-arrow-alt-left"></i></a><div class="headerimage"><img src="./covid/covid-header.svg"></div>
 <article id="294a0a2a-566b-4132-bfa9-75e454898dc0" class="page sans"><h1 id="Intro" class="page-title">Does Employment Affect COVID-19 Case Rates?</h1></header>
 <span class=page-subtitle>Jake Wigal, Dongyu Yang</span><div class="page-body">
 <p class="">COVID-19 case numbers have increased in California despite action from state and municipal governments meant to slow the spread of the virus. New governmental policies often involve modifying the activity of economic participants in a way that attempts to reduce physical contact between people. There are challenges to the uniform implementation of social-distancing guidelines across industries that have led to varying approaches to handling these new policies. For example, while it is possible for universities to switch to an online-only format to limit COVID-19 exposure, the farm industry relies on physical labor that must be performed irrespective of whether workers are safe or healthy.</p><figure id="b9ce0f5d-45bc-48c0-9f6b-539edbdd67cd"><a target="_blank" href="https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">&#x27;Everyone tested positive&#x27;: Covid devastates farm workers</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.guim.co.uk/images/favicon-32x32.ico" class="icon bookmark-icon"/>https://www.theguardian.com/us-news/2020/aug/08/california-covid-19-central-valley-essential-workers</div></div><img src="https://i.guim.co.uk/img/media/c30e7d6f5d12e047f86eb591ffda5d676a0e18ca/0_232_3500_2101/master/3500.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=bac2a1afe6e87962247972520ccb1d77" class="bookmark-image"/></a></figure><p id="6fe9e061-823a-476a-b27e-73579404717b" class="">There have been reports of some essential workers feeling unsafe in their working conditions. An assessment of risk across industries could inform policy makers, industry leaders, and members of the general public who may be employees or consumers of a specific industry, on whether additional precautions or guidelines may be necessary to conduct business in a safe and productive manner.
 
-By analyzing economic data for the CA Employment Development Department and State of California COVID-19 Health Data (March 2020 - September 2020), we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Code"><i class="fas fa-code"></i> Source Code</h2><p>View the source code on Github.</p><figure id="aee60d4d-1fbc-4220-a00b-aac0ae78ef3a"><a target="_blank" href="https://github.com/extremelime/covid19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">extremelime/covid19</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/extremelime/covid19</div></div><img src="https://repository-images.githubusercontent.com/296238251/57229380-f874-11ea-9c01-f576f6b9aa1d" class="bookmark-image"/></a></figure><h2 id="Data" class=""> <i class="fas fa-table"></i> Dataset Sources</h2><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
-<p id="ca36d6a3-33f7-4b33-a838-4c12dd36c7c2" class="">Up-to-date COVID-19 data were freely available from the California Department of Public Health on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/group/covid-19">ca.gov</a>). These data contained the amount of new COVID-19 cases and deaths in each county reported on each day, since 18 Mar 2020. There were a total of about 10,000 rows of entries stored in the csv format, with the following headers:</p>
-<div class="table-responsive"><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>index</th>
-      <th>totalcountconfirmed</th>
-      <th>newcountdeaths</th>
-      <th>totalcountdeaths</th>
-      <th>county</th>
-      <th>newcountconfirmed</th>
-      <th>date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Unique identifier of row data</td>
-      <td>Total count of confirmed COVID-19 cases to date</td>
-      <td>New count of confirmed COVID-19 deaths on report date</td>
-      <td>Total count of confirmed COVID-19 deaths to date</td>
-      <td>Reporting County</td>
-      <td>New count of confirmed COVID-19 cases on report date</td>
-      <td>Date of report</td>
-    </tr>
-  </tbody>
-</table></div>
-<p id="54c3cefc-d7d7-4e8f-8e59-28ab676cdafd" class="">There were inaccuracies in the reporting as some counties inputted negative new counts of COVID-19 cases, possibly to compensate for errant totals from previous reports. By examining the monthly totals, such discrepancies are less likely to be an issue.</p><figure id="de167388-7e5b-495c-bd15-a03c146ff29e"><a target="_blank" href="https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CA sorts through coronavirus data as glitch stymies policy</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.politico.com/21/8e/8fae7c044f8aa66f607a10f86d31/states.png" class="icon bookmark-icon"/>https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972</div></div><img src="https://static.politico.com/e4/e9/7ac61e5545afa8b4a90e29906849/20200807-calicovidtesting-gty-773.jpg" class="bookmark-image"/></a></figure></p><p>Other available datasets included hospitalization, testing, and PPE logistics, but none were able to describe the origin of the cases. Hence, we could not use these data.</p>
-<h3 id="5b4423cd-e944-4a76-8c6b-a4f29a4656e2"><span class="datalink"><a target="_blank" href="https://data.edd.ca.gov/Industry-Information-/Industry-Employment-in-California-Counties/nt76-4rha">Employment</a></span></h3>
-<p id="eae25328-fdf6-49eb-8f62-b29ac07dd68e" class="">Industry employment data for each California county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of jobs in each industry reported each month, since Jan 1990. There were a total of about 760,000 rows of entries stored in the csv format, with the following headers:</p>
-<div class="table-responsive"><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Area Type</th>
-      <th>Area Name</th>
-      <th>Year</th>
-      <th>Month</th>
-      <th>Series Code</th>
-      <th>Industry Title</th>
-      <th>Seasonally Adjusted</th>
-      <th>Current Employment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>State/County/Metropolitan</td>
-      <td>Name of area</td>
-      <td>Calendar year</td>
-      <td>Calendar month</td>
-      <td>Code for the specific industry</td>
-      <td>Official industry name</td>
-      <td>True/False Seasonal changes applied</td>
-      <td>Number of jobs</td>
-    </tr>
-  </tbody>
-</table></div><h3 id="0980860f-c0c8-454b-b703-b567a843c5cc"><span class="datalink">
-<a target="_blank" href="https://www.labormarketinfo.edd.ca.gov/data/monthly-data-release.html">Unemployment</a></span></h3>
-<p id="d8840d4b-d3f7-4a92-9de9-8da40e81a991" class="">The previous dataset accounts for the number of employed people in each county, but not the unemployed. Unemployment data from each county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of unemployed in each county reported each month, since Jan 1990. There were a total of about 160,000 rows of entries stored in the csv format, with the following headers:</p>
-<div class="table-responsive"><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Area Type</th>
-      <th>Area Name</th>
-      <th>Periodyear</th>
-      <th>Period</th>
-      <th>Adjusted</th>
-      <th>Laborforce</th>
-      <th>Employment</th>
-      <th>Unemployment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>State/County/Metropolitan</td>
-      <td>Name of area</td>
-      <td>Calendar year</td>
-      <td>Calendar month</td>
-      <td>True/False Seasonal changes applied</td>
-      <td>Civilian labor force</td>
-      <td>Proportion of the population employed</td>
-      <td>Civilians without jobs and making specific effort to find a job</td>
-    </tr>
-  </tbody>
-</table></div>
-<p id="9e0f9f1a-8600-4213-a30e-1dfa3f3688f2" class="">It was noted that there were discrepancies in the numbers reported from each county, as not all counties reported their employment data in 2020, and the total number of jobs do not necessarily tally with the total workforce since some may take more than 1 job.</p>
-<h3 id="a03effb5-4646-4f55-83c0-2b9e233a2458"><span class="datalink"><a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">County Boundaries</a></span></h3>
-<p id="c69e6625-df45-425c-8738-0e2964908c97" class="">To produce mapped visualizations of county data, we utilized 2016 TIGER/Line Shapefiles, accessible on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">ca.gov</a>).</p>
-<h3 id="e232f037-1788-44ac-aa11-afdd480c645c"><span class="datalink"><a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a></span></h3>
-<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID-19 infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p><p id="2c222762-59b2-4c6e-bc84-f0833d38abfa" class=""></p><h2 id="Analysis"><i class="fas fa-calculator"></i> Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/algorithm-flowchart.png"><img src="./covid/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
+By analyzing economic data for the CA Employment Development Department and State of California COVID-19 Health Data (March 2020 - September 2020), we will seek to understand what effect (if any), county labor force distribution may have on COVID-19 case rates. More specifically we will seek to understand the effect that agricultural employment may have on COVID-19 case rates.</p><h2 id="Analysis"><i class="fas fa-calculator"></i> Analysis</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/algorithm-flowchart.png"><img src="./covid/algorithm-flowchart.png"/></a></figure><p>The above chart depicts an overview of the data processing required for analysis.
 
 The analysis objective was to derive insights from the monthly changes in COVID-19 cases and proportion of jobs both at the county and state level. This was achieved by examining if there were any significant correlations between monthly COVID-19 cases and monthly industry jobs (i.e. if COVID-19 cases may be lower or higher than average in a particular industry). All data were in the csv format and parsed into dataframes using the Pandas Python package, with the exception of the COVID-19 data which were parsed into a dataframe from an API. The data were then merged according to common county names and dates. Fourteen counties (California has 58) did not report data in 2020, so they were excluded from industry data calculations. This does not apply to unemployment data, however, which were reported for every county in the timeframe of interest.</p>
-<h2 id="Visualization"><i class="fas fa-chart-bar"></i> Visualization</h2><figure id="c37147df-897e-4ade-9857-a10097211514" class="image"><a target="_blank" href="./covid/visualization-flowchart.png"><img src="./covid/visualization-flowchart.png"/></a></figure><p>Scatter plots, bar plots and choropleth maps were subsequently generated using the processed dataframes.
+<h2 id="Visualization" ><i class="fas fa-chart-bar"></i> Visualization</h2><p>Scatter plots, bar plots, and choropleth maps were subsequently generated using the processed dataframes.
 <ul><li>Scatter plots were chosen for analyzing the correlation between COVID-19 cases and % of jobs in a particular sector across the various counties. A strong correlation would indicate a possible relationship between industry activity and COVID-19 infection rate.</li>
 <li>Bar plots were chosen for analysing the distribution of workforce across the various industries, which would help to quantify differences in jobs/COVID-19 cases between different industries.</li>
-<li>Choropleth maps helped to display geospatial distribution of the workforce and COVID-19 cases. These maps can be used to identify any clusters where COVID-19 cases or certain industries may be concentrated.</li></ul></p><p>All the bar, line and scatter charts below were generated using Plotly to enable mouse-over queries and sliders to switch between different months and charts. Choropleth maps were generated using Folium and displayed in html using Leaflet. A few HTML tweaks were required to calibrate the proper display bounds and zooming parameters that would enable the smoothest user experience.</p>
+<li>Choropleth maps helped to display geospatial distribution of the workforce and COVID-19 cases. These maps can be used to identify any clusters where COVID-19 cases or certain industries may be concentrated.</li></ul></p><p>All the bar, line and scatter charts below were generated using Plotly to enable mouse-over queries and sliders to switch between different months and charts. Choropleth maps were generated using Folium and displayed in html using Leaflet. A few tweaks in Leaflet/HTML were required to calibrate the proper display bounds and zooming parameters.</p>
 <h3 id="b49cb5be-3811-46dd-994e-834a574c1304" class="">Figure 1: COVID-19 Cases per 100k in California (CA)</h3>
 <div class="videoWrapper"><iframe src="./covid/1_covid_cases.html" height="90%" width="100%" title="Figure 1" frameBorder="0"></iframe></div>
 <p id="1435a851-e34b-4c99-9253-fc2530151619" class="">Case rates in California have been increasing. We want to examine the relationship between the case rates and the proportion of industry in each county. </p>
@@ -325,4 +243,107 @@ The data suggest that Total Farm began with low COVID-19 cases, and started to c
 <div class="videoWrapper"><iframe  src="./covid/6a_covid_unemployment.html" height="90%" width="100%" title="Figure 5a" frameBorder="0"></iframe></div>
 <p>There is a moderate correlation between county unemployment and case rates from May to July. Causality may work both ways in this case, as higher case rates may cause more business closures leading to higher unemployment; or high unemployment leading to more job-seekers taking odd-jobs/gig-work that involve public interaction or leaving home for public assistance.</p>
 <h3 id="End" class="">Figure 6b: COVID-19 Case Rate and Unemployment Rate of CA Counties, July 2020 - Choropleth</h3>
-<div class="videoWrapper"><iframe src="./covid/6b_ca_covid_unemployment_map.html" height="90%" width="100%" title="Figure 6b" frameBorder="0"></iframe></div><h2 id="Conclusion" class=""><i class="fas fa-check-circle"></i> Conclusion</h2><blockquote class="">“You can appear to contain the spread among middle-class workers but when it reaches those workers who are furthest on the margins, who are most disadvantaged, the virus is going to spread” - Edward Flores, sociology professor at the University of California, Merced</blockquote><p id="5adcc589-7701-4b9e-83fc-acd58d7faf97" class="">It may be the case that agricultural workers and the unemployed are at greater risk of contracting COVID-19. This information could prove informative to decision makers, industry leaders, and the general public alike for implementing measures to prevent the spread of COVID-19, and appropriately prioritizing resources to those most at-risk of infection. More research can be done to determine if industry employment is of significance when taking other important demographics into consideration such as age, or the population density of an area. Another area of interest to future researchers may be case rates specifically for California's homeless population.</p></div></article></body></html></div></article></body></html>
+<div class="videoWrapper"><iframe src="./covid/6b_ca_covid_unemployment_map.html" height="90%" width="100%" title="Figure 6b" frameBorder="0"></iframe></div><h2 id="Conclusion" class=""><i class="fas fa-check-circle"></i> Conclusion</h2><blockquote class="">"You can appear to contain the spread among middle-class workers but when it reaches those workers who are furthest on the margins, who are most disadvantaged, the virus is going to spread" - Edward Flores, sociology professor at the University of California, Merced</blockquote><p id="5adcc589-7701-4b9e-83fc-acd58d7faf97" class="">It may be the case that agricultural workers and the unemployed are at greater risk of contracting COVID-19. This information could prove informative to decision makers, industry leaders, and the general public alike for implementing measures to prevent the spread of COVID-19, and appropriately prioritizing resources to those most at-risk of infection. More research can be done to determine if industry employment is of significance when taking other important demographics into consideration such as age, or the population density of an area. Another area of interest to future researchers may be case rates specifically for California's homeless population.</p></div><h2 id="Code" class="accordion"><i class="fas fa-code"></i> Source Code</h2><div class="panel"><p>View the source code on Github.</p><figure id="aee60d4d-1fbc-4220-a00b-aac0ae78ef3a"><a target="_blank" href="https://github.com/extremelime/covid19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">extremelime/covid19</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/extremelime/covid19</div></div><img src="https://repository-images.githubusercontent.com/296238251/57229380-f874-11ea-9c01-f576f6b9aa1d" class="bookmark-image"/></a></figure></div><h2 class="accordion"><i class="fas fa-table"></i> Dataset Sources</h2><div class="panel"><h3 id="8b3140e4-c4b8-4ff7-a9ba-dd5780186d42"><span class="datalink"><a target="_blank" href="https://data.ca.gov/group/covid-19">COVID-19</a></span></h3>
+<p id="ca36d6a3-33f7-4b33-a838-4c12dd36c7c2" class="">Up-to-date COVID-19 data were freely available from the California Department of Public Health on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/group/covid-19">ca.gov</a>). These data contained the amount of new COVID-19 cases and deaths in each county reported on each day, since 18 Mar 2020. There were a total of about 10,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>index</th>
+      <th>totalcountconfirmed</th>
+      <th>newcountdeaths</th>
+      <th>totalcountdeaths</th>
+      <th>county</th>
+      <th>newcountconfirmed</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Unique identifier of row data</td>
+      <td>Total count of confirmed COVID-19 cases to date</td>
+      <td>New count of confirmed COVID-19 deaths on report date</td>
+      <td>Total count of confirmed COVID-19 deaths to date</td>
+      <td>Reporting County</td>
+      <td>New count of confirmed COVID-19 cases on report date</td>
+      <td>Date of report</td>
+    </tr>
+  </tbody>
+</table></div>
+<p id="54c3cefc-d7d7-4e8f-8e59-28ab676cdafd" class="">There were inaccuracies in the reporting as some counties inputted negative new counts of COVID-19 cases, possibly to compensate for errant totals from previous reports. By examining the monthly totals, such discrepancies are less likely to be an issue.</p><figure id="de167388-7e5b-495c-bd15-a03c146ff29e"><a target="_blank" href="https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">CA sorts through coronavirus data as glitch stymies policy</div><div class="bookmark-description"></div></div><div class="bookmark-href"><img src="https://static.politico.com/21/8e/8fae7c044f8aa66f607a10f86d31/states.png" class="icon bookmark-icon"/>https://www.politico.com/states/california/story/2020/08/07/california-sorts-through-coronavirus-data-as-glitch-stymies-policy-decisions-1305972</div></div><img src="https://static.politico.com/e4/e9/7ac61e5545afa8b4a90e29906849/20200807-calicovidtesting-gty-773.jpg" class="bookmark-image"/></a></figure></p><p>Other available datasets included hospitalization, testing, and PPE logistics, but none were able to describe the origin of the cases. Hence, we could not use these data.</p>
+<h3 id="5b4423cd-e944-4a76-8c6b-a4f29a4656e2"><span class="datalink"><a target="_blank" href="https://data.edd.ca.gov/Industry-Information-/Industry-Employment-in-California-Counties/nt76-4rha">Employment</a></span></h3>
+<p id="eae25328-fdf6-49eb-8f62-b29ac07dd68e" class="">Industry employment data for each California county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of jobs in each industry reported each month, since Jan 1990. There were a total of about 760,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Area Type</th>
+      <th>Area Name</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Series Code</th>
+      <th>Industry Title</th>
+      <th>Seasonally Adjusted</th>
+      <th>Current Employment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>State/County/Metropolitan</td>
+      <td>Name of area</td>
+      <td>Calendar year</td>
+      <td>Calendar month</td>
+      <td>Code for the specific industry</td>
+      <td>Official industry name</td>
+      <td>True/False Seasonal changes applied</td>
+      <td>Number of jobs</td>
+    </tr>
+  </tbody>
+</table></div><h3 id="0980860f-c0c8-454b-b703-b567a843c5cc"><span class="datalink">
+<a target="_blank" href="https://www.labormarketinfo.edd.ca.gov/data/monthly-data-release.html">Unemployment</a></span></h3>
+<p id="d8840d4b-d3f7-4a92-9de9-8da40e81a991" class="">The previous dataset accounts for the number of employed people in each county, but not the unemployed. Unemployment data from each county were obtained from the State of California Employment Development Department (<a target="_blank" href="http://edd.gov.ca/">edd.gov.ca</a>). These data contain the total number of unemployed in each county reported each month, since Jan 1990. There were a total of about 160,000 rows of entries stored in the csv format, with the following headers:</p>
+<div class="table-responsive"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Area Type</th>
+      <th>Area Name</th>
+      <th>Periodyear</th>
+      <th>Period</th>
+      <th>Adjusted</th>
+      <th>Laborforce</th>
+      <th>Employment</th>
+      <th>Unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>State/County/Metropolitan</td>
+      <td>Name of area</td>
+      <td>Calendar year</td>
+      <td>Calendar month</td>
+      <td>True/False Seasonal changes applied</td>
+      <td>Civilian labor force</td>
+      <td>Proportion of the population employed</td>
+      <td>Civilians without jobs and making specific effort to find a job</td>
+    </tr>
+  </tbody>
+</table></div>
+<p id="9e0f9f1a-8600-4213-a30e-1dfa3f3688f2" class="">It was noted that there were discrepancies in the numbers reported from each county, as not all counties reported their employment data in 2020, and the total number of jobs do not necessarily tally with the total workforce since some may take more than 1 job.</p>
+<h3 id="a03effb5-4646-4f55-83c0-2b9e233a2458"><span class="datalink"><a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">County Boundaries</a></span></h3>
+<p id="c69e6625-df45-425c-8738-0e2964908c97" class="">To produce mapped visualizations of county data, we utilized 2016 TIGER/Line Shapefiles, accessible on the California Open Data Portal (<a target="_blank" href="https://data.ca.gov/dataset/ca-geographic-boundaries">ca.gov</a>).</p>
+<h3 id="e232f037-1788-44ac-aa11-afdd480c645c"><span class="datalink"><a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a></span></h3>
+<p id="2cae16c2-b1c3-4ee7-be3a-8608f10e6ff9" class="">2019 United States Census Bureau (<a target="_blank" href="https://www.census.gov/content/census/en/search-results.html?stateGeo=none&amp;q=california%20population%20ca&amp;searchtype=web&amp;page=1">US Census</a>) Estimates provided data on the total population of each county. These data were used to estimate the COVID-19 infection rate per county. Although the population data were only recorded annually, they remain a relevant estimate since there were no known large population changes during the period of interest.</p></div></div></article><script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body></html>
