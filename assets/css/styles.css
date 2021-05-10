@@ -11,10 +11,7 @@
 font-family: "retro";
 src: url("../../libs/fonts/air_mitalic.ttf") format("opentype");
 }
-@font-face {
-font-family: "retro1";
-src: url("../../libs/fonts/dpcomic.ttf") format("truetype");
-}
+
 html {
 scroll-behavior: smooth;
 font-size: 18px;
@@ -111,7 +108,7 @@ padding-top: 5px
 }
 .hero .down-arrow a:hover {
 color: #fff;
-text-shadow: 2px 2px 4px rgba(128, 49, 0, 0.8);
+text-shadow: 2px 2px 4px #32cd32;
 transition:.5s ease all;
 }
 .hero-text {
@@ -312,7 +309,6 @@ background-repeat: no-repeat;
 .project-image img:before {
 content: ' ';
 position: absolute;
-background-image: url("../../assets/img/fallback.jpg");
 display: inline-block;
 min-width: 300px;
 min-height: 300px;
@@ -372,7 +368,6 @@ padding: 50px 15px;
 /*Orange (alt. #ffa500)*/
 background: #f39c12;
 text-align: center;
-background-image: url("../../assets/img/contact_us.jpg");
 }
 #contact-me h2 {
 margin: 0 0 15px 0;
