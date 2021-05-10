@@ -4196,7 +4196,7 @@ li{
   margin: 3vmin 8vmin 8vmin 8vmin;
 }
 #lime {
-
+display:none;
   left: 2vh;
 }
 /* iPhone X Portrait */
