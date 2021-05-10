@@ -160,9 +160,9 @@ top right bottom left:0;
 display: flex;
 align-items: center;
 justify-content: center;
-margin: 0 auto;
-padding: 75px 5px;
-padding-left: 200px;
+margin: 5vh;
+
+padding-bottom:5vh;
 border-bottom: 1px solid #dcd9d9;
 font-family: 'Arial', sans-serif;
 }
@@ -184,39 +184,45 @@ padding-right: 15px;
 min-height: 1px;
 font-size: 1.6em;
 }
-#about p {
+#about p{
 color:  #424242;
 margin: 0;
-padding-bottom: 30px;
 padding-right: 11em;
 font-size: 1.3em;
 }
 /* education Section */
 #education {
-padding: 50px 15px;
+margin:5vh;
 text-align: center;
+font-family: 'Arial', sans-serif;
 border-bottom: 1px solid #e4e4e4;
 }
+#education img {
+max-height: 3em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+}
+
 #education h2 {
 color: #374054;
 }
 #education-timeline {
-margin: 30px auto 0 auto;
+margin-left: 15%;
+margin-right: 15%;
 position: relative;
-max-width: 1000px;
 }
 #education-timeline div {
 background: #fff;
 padding: 10px;
-margin-bottom: 10px;
-border: 3px solid #c2c2c2
+margin-bottom: 2em;
+
 }
 #education-timeline h3 {
 font-size: 1.5em;
 font-weight: 300;
 color: #374054;
 display: inline-block;
-margin: 0;
+margin: 0 0 5px 0;
 }
 #education-timeline h4 {
 font-size: 1.2em;
@@ -227,7 +233,6 @@ margin: 0 0 15px 0;
 #education-timeline p {
 color: #74808a;
 font-size: 0.9em;
-margin: 0;
 }
 #education-timeline:before,#education-timeline:after {
 content: none;
@@ -267,13 +272,13 @@ font-weight: 500;
 margin: 0 0 15px 0;
 font-size: 1.3em;
 }
-.x-education-block p,.x-education-block ul {
+.x-education-block p,.x-education-block {
 margin: 0;
 color: #74808a;
 font-size: inherit;
 font-size: 1.3em;
 }
-.x-education-block ul {
+.x-education-block {
 padding: 0 0 0 15px;
 font-size: 1.3em;
 }
@@ -337,7 +342,7 @@ display: none;
 }
 /* skills Section */
 #skills {
-padding: 50px 15px;
+padding: 10px;
 text-align: center;
 }
 #skills h2 {
@@ -359,6 +364,7 @@ background: #e4e4ea;
 list-style: none;
 font-size: 1.3em;
 border: 3px solid #868687;
+border-radius:0.3rem;
 }
 /* contact Section */
 #contact-me {
@@ -601,7 +607,7 @@ float: none;
 #about h2 {
 text-align: center;
 width: auto;
-float: none;
+aboutfloat: none;
 }
 #about p {
 text-align: left;
@@ -609,6 +615,7 @@ width: auto;
 float: none;
 padding-right: 1em;
 padding-left: 1em;
+line-height: 1.2em;
 }
 }
 /* If the orientation of the screen is Portrait */
