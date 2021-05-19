@@ -62,16 +62,14 @@ font-family: "Arial", sans-serif;
 font-weight: bold;
 font-size: 0.9em;
 background: #FFF;
-padding: 0.3rem 3.4rem;
-border: 3px solid #32cd32;
+padding: 0.35rem 2rem;
+border: 2px solid #32cd32;
 border-radius:0.3rem;
-margin-right: 2.6rem;
 box-shadow: 0 0 0 #32cd32;
 transition: all 0.2s;
-padding-top: 10px;
+
 }
 .btn:last-child {
-margin: 0;
 }
 a, .slider {
     text-decoration: none;
@@ -363,7 +361,7 @@ color: #374054;
 background: #e4e4ea;
 list-style: none;
 font-size: 1.3em;
-border: 3px solid #868687;
+border: 2px solid #868687;
 border-radius:0.3rem;
 }
 /* contact Section */
@@ -626,9 +624,8 @@ font-family: "Arial", sans-serif;
 font-weight: bold;
 font-size: 0.9em;
 background: #FFF;
-padding: 0.3rem 3.4rem;
-border: 3px solid #32cd32;
-margin-right: 2.6rem;
+padding: 0.35rem 2rem;
+border: 2px solid #32cd32;
 box-shadow: 0 0 0 #32cd32;
 transition: all 0.2s;
 
