@@ -155,9 +155,8 @@ top right bottom left:0;
 }
 /* About Section */
 #about {
-display: flex;
 align-items: center;
-justify-content: center;
+text-align: center;
 margin: 5vh;
 
 padding-bottom:5vh;
