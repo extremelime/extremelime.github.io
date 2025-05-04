@@ -58,19 +58,68 @@
             </div>
           </div>
         </section>
-        <!-- Publications Section (dynamic) -->
+        <!-- Publications Section (static) -->
   <section class="relative bg-blue-300 py-8 md:py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <h3 class="h3 mb-3">Publications</h3>
-      <div id="publications" class="grid md:grid-cols-2 gap-6"></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="https://calhoun.nps.edu/handle/10945/72017" target="_blank" rel="noopener noreferrer" class="h-full block" style="text-decoration:none;">
+          <div class="flex text-lg p-5 rounded border transition duration-300 ease-in-out bg-white shadow-md border-gray-200 hover:shadow-lg hover:scale-105 h-full cursor-pointer hover:cursor-pointer">
+            <div class="flex-grow">
+              <div class="font-bold leading-snug tracking-tight mb-1">Optimizing Last Mile Delivery of Emergency Supplies for Oahu, Hawaii (2023)</div>
+              <div class="tracking-normal text-gray-600">Developed congestion-based traffic assignment and capacitated vehicle routing problem models to find optimal points of distribution for emergency supplies.</div>
+            </div>
+            <div class="flex justify-center items-center w-24 h-24 flex-shrink-0 ml-3"><img src="./src/images/pub1.png" alt="Optimizing Last Mile Delivery of Emergency Supplies for Oahu, Hawaii (2023)" class="object-contain w-20 h-20"/></div>
+          </div>
+        </a>
+        <a href="https://apps.dtic.mil/sti/trecms/pdf/AD1211119.pdf" target="_blank" rel="noopener noreferrer" class="h-full block" style="text-decoration:none;">
+          <div class="flex text-lg p-5 rounded border transition duration-300 ease-in-out bg-white shadow-md border-gray-200 hover:shadow-lg hover:scale-105 h-full cursor-pointer hover:cursor-pointer">
+            <div class="flex-grow">
+              <div class="font-bold leading-snug tracking-tight mb-1">Cellular Coverage Mapping in the U.S. Virgin Islands (2023)</div>
+              <div class="tracking-normal text-gray-600">Implemented a physics-based cellular coverage model for the U.S. Virgin Islands to identify vulnerable critical facilities and optimal sites for future investment.</div>
+            </div>
+            <div class="flex justify-center items-center w-24 h-24 flex-shrink-0 ml-3"><img src="./src/images/pub2.png" alt="Cellular Coverage Mapping in the U.S. Virgin Islands (2023)" class="object-contain w-20 h-20"/></div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
-  <!-- Personal Projects Section (dynamic) -->
+  <!-- Personal Projects Section (static) -->
   <section class="relative bg-gray-200 py-8 md:py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <h3 class="h3 mb-3">Personal Projects</h3>
-      <div id="project-carousel" class="w-full overflow-hidden mb-6"></div>
-      <div id="personal-projects" class="grid md:grid-cols-2 gap-6"></div>
+      <div class="grid md:grid-cols-2 gap-6 items-start">
+        <div id="personal-projects" class="flex flex-col gap-6">
+          <a href="https://quarkiql.com" target="_blank" rel="noopener noreferrer" class="h-full block" style="text-decoration:none;">
+            <div class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out bg-white shadow-md border-gray-200 hover:shadow-lg hover:scale-105 min-h-[150px] h-full cursor-pointer hover:cursor-pointer">
+              <div class="flex-grow">
+                <div class="font-bold leading-snug tracking-tight mb-1">QuarkIQL - Computer Vision API Testing Platform</div>
+                <div class="tracking-normal text-gray-600">Full stack web app created using React, AWS (RDB, CodeDeploy, EC2, S3) and Tailwind CSS.</div>
+              </div>
+              <div class="flex justify-center items-center w-9 h-9 rounded-lg bg-white shadow flex-shrink-0 ml-3"><img src="./src/images/quark.png" alt="QuarkIQL - Computer Vision API Testing Platform" class="object-contain w-8 h-8"/></div>
+            </div>
+          </a>
+          <a href="https://mlb.jakewigal.com" target="_blank" rel="noopener noreferrer" class="h-full block" style="text-decoration:none;">
+            <div class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out bg-white shadow-md border-gray-200 hover:shadow-lg hover:scale-105 min-h-[150px] h-full cursor-pointer hover:cursor-pointer">
+              <div class="flex-grow">
+                <div class="font-bold leading-snug tracking-tight mb-1">MLB Daily - Frontend UI for Sports APIs</div>
+                <div class="tracking-normal text-gray-600">Custom CSS and JavaScript frontend running on Flask backend and deployed on AWS EC2.</div>
+              </div>
+              <div class="flex justify-center items-center w-9 h-9 rounded-lg bg-white shadow flex-shrink-0 ml-3"><img src="./src/images/mlb.png" alt="MLB Daily - Frontend UI for Sports APIs" class="object-contain w-8 h-8"/></div>
+            </div>
+          </a>
+          <a href="https://jakewigal.com/covid-19" target="_blank" rel="noopener noreferrer" class="h-full block" style="text-decoration:none;">
+            <div class="flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out bg-white shadow-md border-gray-200 hover:shadow-lg hover:scale-105 min-h-[150px] h-full cursor-pointer hover:cursor-pointer">
+              <div class="flex-grow">
+                <div class="font-bold leading-snug tracking-tight mb-1">COVID-19 Case Rates Data Analysis and Visualization</div>
+                <div class="tracking-normal text-gray-600">Data analysis and visualization using Pandas, SciPy, Plotly, and Leaflet.</div>
+              </div>
+              <div class="flex justify-center items-center w-9 h-9 rounded-lg bg-white shadow flex-shrink-0 ml-3"><img src="./src/images/covid19.png" alt="COVID-19 Case Rates Data Analysis and Visualization" class="object-contain w-8 h-8"/></div>
+            </div>
+          </a>
+        </div>
+        <div class="w-full flex justify-center items-start"><div id="project-carousel" class="w-full max-w-md overflow-hidden mb-6 md:mb-0"></div></div>
+      </div>
     </div>
   </section>
   <section class="relative w-full" id="project-carousel-section">
