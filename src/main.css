@@ -1468,7 +1468,7 @@ body > div:nth-child(3) > div > div > div{
 }
 @media (max-width: 768px){
     .md\:mb-4 {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 @media (min-width: 768px) {
