@@ -1463,6 +1463,11 @@ body > div:nth-child(3) > div > div > div{
         padding-right: 1.5rem;
     }
 }
+@media (max-width: 768px){
+    .md\:mb-4 {
+        margin-bottom: 1rem;
+    }
+}
 @media (min-width: 768px) {
     .image-max-width-lg {
         max-width: 24rem;
