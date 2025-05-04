@@ -1468,7 +1468,7 @@ body > div:nth-child(3) > div > div > div{
 }
 @media (max-width: 768px){
     .md\:mb-4 {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
 @media (min-width: 768px) {
@@ -1640,12 +1640,12 @@ body > div:nth-child(3) > div > div > div{
 
 /* Force all grid children in publications and personal-projects to fill the row height */
 #publications > a,
-#personal-projects > a {
+#projects > a {
   height: 100%;
   display: block;
 }
 #publications > a > div,
-#personal-projects > a > div {
+#projects > a > div {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -1653,7 +1653,7 @@ body > div:nth-child(3) > div > div > div{
 
 /* Make all cards show pointer cursor on hover */
 #publications .card-hover,
-#personal-projects .card-hover {
+#projects.card-hover {
   cursor: pointer;
 }
 
