@@ -1678,8 +1678,6 @@ body > div:nth-child(3) > div > div > div{
   border-left: 6px solid #00205b; /* NPS navy */
 }
 .fill-parent {
-    width: 100% !important;
-    height: 100% !important;
     object-fit: cover;
     display: block;
   }
